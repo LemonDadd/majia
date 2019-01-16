@@ -28,6 +28,7 @@
             make.top.left.equalTo(@8);
             make.bottom.right.equalTo(@-8);
         }];
+
     }
     return self;
 }

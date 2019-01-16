@@ -39,7 +39,7 @@
         make.edges.equalTo(self.view);
     }];
     
-    [self loadData];
+    //[self loadData];
 }
 
 - (void)pop{

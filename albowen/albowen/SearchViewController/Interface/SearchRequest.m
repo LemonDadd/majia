@@ -37,7 +37,6 @@
 + (void)requestMvUserSearchLogRequest:(void(^)(NSArray *message,
                                                NSString *errorMsg))request {
     NSMutableDictionary* paramDic = [[NSMutableDictionary alloc] init];
-    [paramDic setObject:[UserInfoClass getUserInfoClass].id forKey:@"uesrid"];
     [HttpHelper httpDataRequestByGetMethod:@"" paramDictionary:paramDic TimeOutSeconds:120 request:^(BOOL finish, NSString *data) {
         if (finish) {
             if (data == nil) {
@@ -63,7 +62,6 @@
                    Request:(void(^)(NSArray *message,
                                     NSString *errorMsg))request {
     NSMutableDictionary* paramDic = [[NSMutableDictionary alloc] init];
-    [paramDic setObject:[UserInfoClass getUserInfoClass].id forKey:@"uesrid"];
     [paramDic setObject:title forKey:@"title"];
     [HttpHelper httpDataRequestByGetMethod:@"" paramDictionary:paramDic TimeOutSeconds:120 request:^(BOOL finish, NSString *data) {
         if (finish) {

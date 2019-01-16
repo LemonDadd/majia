@@ -36,18 +36,19 @@
  *  刷新数据
  */
 - (void)addHistoryData{
-    KWeakSelf;
     _tableView.mj_header =[MJRefreshNormalHeader headerWithRefreshingBlock:^{
         // 马上进入刷新状态
-        [weakSelf.tableView.mj_header beginRefreshing];
+        [self updateData:nil];
     }];
+    [_tableView.mj_header beginRefreshing];
 }
 
 - (void)updateData:(NSArray*)resourceData {
-    [_allResouce removeAllObjects];
-    [_allResouce addObjectsFromArray:resourceData];
-    [_tableView.mj_header endRefreshing];
-    [_tableView reloadData];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView reloadData];
+    });
 }
 
 #pragma mark - tableViewDelegateBegin
@@ -57,14 +58,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    if (section == 0) {
+        return 1;
+    }
+    return 10;
 }
 
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    
-    return 10.f;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
