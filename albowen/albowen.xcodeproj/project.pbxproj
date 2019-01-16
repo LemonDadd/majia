@@ -24,6 +24,7 @@
 		B01D38E721EDDA6A00BC87B8 /* NHFDownImages.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38E121EDDA6A00BC87B8 /* NHFDownImages.m */; };
 		B01D38E821EDDA6A00BC87B8 /* NHFUpLoadImages.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38E421EDDA6A00BC87B8 /* NHFUpLoadImages.m */; };
 		B01D38ED21EDDC0600BC87B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01D38E921EDDBFF00BC87B8 /* Assets.xcassets */; };
+		B01D38F021EF27CD00BC87B8 /* ResourceClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38EF21EF27CD00BC87B8 /* ResourceClass.m */; };
 		DA8BB8A521EA135200506854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB8A421EA135200506854 /* AppDelegate.m */; };
 		DA8BB8A821EA135200506854 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB8A721EA135200506854 /* ViewController.m */; };
 		DA8BB8AB21EA135200506854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8BB8A921EA135200506854 /* Main.storyboard */; };
@@ -102,6 +103,8 @@
 		B01D38E321EDDA6A00BC87B8 /* NHFDownImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHFDownImages.h; sourceTree = "<group>"; };
 		B01D38E421EDDA6A00BC87B8 /* NHFUpLoadImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHFUpLoadImages.m; sourceTree = "<group>"; };
 		B01D38E921EDDBFF00BC87B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B01D38EE21EF27CD00BC87B8 /* ResourceClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceClass.h; sourceTree = "<group>"; };
+		B01D38EF21EF27CD00BC87B8 /* ResourceClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResourceClass.m; sourceTree = "<group>"; };
 		BE3A252BBA1B6B13B1723648 /* libPods-albowen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-albowen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8BB8A021EA135200506854 /* albowen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = albowen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8BB8A321EA135200506854 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -376,6 +379,8 @@
 				DA8BB8B221EA135400506854 /* main.m */,
 				DA8BB8FA21EA24D600506854 /* PrefixHeader.pch */,
 				DA8BB8FB21EA259E00506854 /* setting.h */,
+				B01D38EE21EF27CD00BC87B8 /* ResourceClass.h */,
+				B01D38EF21EF27CD00BC87B8 /* ResourceClass.m */,
 			);
 			path = albowen;
 			sourceTree = "<group>";
@@ -685,6 +690,7 @@
 				DA8BB93021EB8B9C00506854 /* ListViewController.m in Sources */,
 				B01D38D421EDD93300BC87B8 /* SearchHistroyTableViewCell.m in Sources */,
 				DA8BB8F921EA246000506854 /* CustomView.m in Sources */,
+				B01D38F021EF27CD00BC87B8 /* ResourceClass.m in Sources */,
 				B01D38E621EDDA6A00BC87B8 /* HttpHelpBase.m in Sources */,
 				B01D38D221EDD93300BC87B8 /* SearchHotTableViewCell.m in Sources */,
 				B01D38D321EDD93300BC87B8 /* SearchHeaderView.m in Sources */,

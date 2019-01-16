@@ -9,6 +9,7 @@
 #import "BaseTabBarController.h"
 #import "HomeViewController.h"
 #import "ListViewController.h"
+#import "SearchViewController.h"
 #import "UserViewController.h"
 
 
@@ -28,8 +29,8 @@
     ListViewController *guide = [ListViewController new];
     [self addChildVc:guide title:@"智慧导览" image:@"zhdl_icon" selectedImage:@"zhdl_icon_true"];
     
-    //    InteractViewController *interact = [InteractViewController new];
-    //    [self addChildVc:interact title:@"体验互动" image:@"tyhd_icon" selectedImage:@"tyhd_icon_true"];
+    SearchViewController *interact = [SearchViewController new];
+    [self addChildVc:interact title:@"体验互动" image:@"tyhd_icon" selectedImage:@"tyhd_icon_true"];
     
     //    StaffViewController *staff = [StaffViewController new];
     //    [self addChildViewControllerByController:staff Title:@"首页" Image:nil];

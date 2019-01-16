@@ -28,6 +28,7 @@
         [self.tab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self);
         }];
+        _hotResource = @[@"hehe",@"haha"];
     }
     return self;
 }
@@ -115,7 +116,7 @@
 
 
 -(void)setHotResource:(NSArray *)hotResource {
-    _hotResource = hotResource;
+    
     [_tab reloadData];
 }
 
