@@ -7,16 +7,32 @@
 //
 
 #import "UserViewController.h"
+#import "MineView.h"
 
 @interface UserViewController ()
-
+@property (nonatomic, strong)MineView *mineView;
 @end
 
 @implementation UserViewController
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (_mineView) {
+        [_mineView.mainTableView reloadData];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    
+    _mineView = [MineView new];
+    [self.view addSubview:_mineView];
+    [_mineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 /*

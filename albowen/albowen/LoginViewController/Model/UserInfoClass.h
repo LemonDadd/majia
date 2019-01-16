@@ -34,6 +34,7 @@ static UserInfoClass *staticUserInfoClass;
 @property (nonatomic, copy) NSString *nativeplace;
 @property (nonatomic, copy) NSString *emotionalstate;
 @property (nonatomic, copy) NSString *address;
+@property (nonatomic, strong)UIImage *image;
 
 /**
  *  获取用户信息

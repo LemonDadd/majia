@@ -26,4 +26,5 @@
 #import "UIColor+Unit.h"
 #import "UIFont+Unit.h"
 #import "NSString+unit.h"
+#import "ResourceClass.h"
 #endif /* PrefixHeader_pch */

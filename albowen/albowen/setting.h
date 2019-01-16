@@ -31,7 +31,7 @@
 //四舍五入
 #define K_Int(float)  roundf(float)
 
-#define MCOLOR 0xFF4C2A
+#define MCOLOR 0x19BCE8
 
 #define KCOLOR(r,g,b)  [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 
@@ -40,6 +40,12 @@
 #define K_TEXTCOLOR KCOLOR(156, 157, 158)
 
 #define K_H_TextCOLOR KCOLOR(162, 164, 161)
+
+// 16进制形式
+#define kColorWithHex(hexValue) \
+[UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.0 \
+green:((float)((hexValue & 0xFF00) >> 8)) / 255.0 \
+blue:((float)(hexValue & 0xFF)) / 255.0 alpha:1.0]
 
 // 灰色字体
 #define K_HColor [UIColor colorWithRed:193/255.0 green:192/255.0 blue:191/255.0 alpha:1]

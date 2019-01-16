@@ -10,6 +10,12 @@
 #import "MainTableViewCell.h"
 #import "HomeTableViewCell.h"
 
+@interface HomeView()
+
+@property (nonatomic, strong)NSArray *resource;
+
+@end
+
 @implementation HomeView
 
 - (instancetype)init
@@ -28,6 +34,8 @@
             make.height.equalTo(self);
         }];
         [self addHistoryData];
+        
+        
     }
     return self;
 }
@@ -46,6 +54,8 @@
 - (void)updateData:(NSArray*)resourceData {
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        self.resource = [[NSUserDefaults standardUserDefaults]objectForKey:@"data"];
         [self.tableView.mj_header endRefreshing];
         [self.tableView reloadData];
     });
@@ -61,7 +71,7 @@
     if (section == 0) {
         return 1;
     }
-    return 10;
+    return _resource.count;
 }
 
 
@@ -85,6 +95,12 @@
         if (cell == nil) {
             cell = [[HomeTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HomeTableViewCell"];
         }
+        NSDictionary *dic = _resource[indexPath.row];
+        ResourceClass *model = [ResourceClass mj_objectWithKeyValues:dic];
+        [cell.top sd_setImageWithURL:[NSURL URLWithString:model.imageList[0]] placeholderImage:[UIImage imageNamed:@""]];
+        cell.name.text = model.name;
+        cell.disLabel.text = model.dis;
+        
         return cell;
     }
     return [UITableViewCell new];

@@ -20,6 +20,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)gotoLoginViewController {
+    
+}
+
 /*
 #pragma mark - Navigation
 

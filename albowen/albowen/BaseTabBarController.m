@@ -24,19 +24,19 @@
     // Do any additional setup after loading the view.
     // Do any additional setup after loading the view.
     HomeViewController *home = [HomeViewController new];
-    [self addChildVc:home title:@"首页" image:@"home_icon" selectedImage:@"home_icon_true"];
+    [self addChildVc:home title:@"ที่หน้าแรก" image:@"home_icon" selectedImage:@"home_icon_true"];
     
     ListViewController *guide = [ListViewController new];
-    [self addChildVc:guide title:@"智慧导览" image:@"zhdl_icon" selectedImage:@"zhdl_icon_true"];
+    [self addChildVc:guide title:@"รายชื่อ" image:@"zhdl_icon" selectedImage:@"zhdl_icon_true"];
     
     SearchViewController *interact = [SearchViewController new];
-    [self addChildVc:interact title:@"体验互动" image:@"tyhd_icon" selectedImage:@"tyhd_icon_true"];
+    [self addChildVc:interact title:@"ค้นหา" image:@"tyhd_icon" selectedImage:@"tyhd_icon_true"];
     
     //    StaffViewController *staff = [StaffViewController new];
     //    [self addChildViewControllerByController:staff Title:@"首页" Image:nil];
     
     UserViewController *mine = [UserViewController new];
-    [self addChildVc:mine title:@"我的" image:@"mine_icon" selectedImage:@"mine_icon_true"];
+    [self addChildVc:mine title:@"ฉัน" image:@"mine_icon" selectedImage:@"mine_icon_true"];
 }
 
 - (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
@@ -63,7 +63,7 @@
     selectTextAttrs[NSForegroundColorAttributeName] =[UIColor colorWithNumber:0X804000];
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
-    
+    [[UINavigationBar appearance]setTintColor:[UIColor colorWithNumber:MCOLOR]];
     // 先给外面传进来的小控制器 包装 一个导航控制器
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];
     // 添加为子控制器

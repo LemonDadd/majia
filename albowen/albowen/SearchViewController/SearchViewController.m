@@ -25,8 +25,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.titleView = self.searchTitleView;
-    self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(pop)];
-    
     _resultView = [SearchResultView new];
     [self.view addSubview:_resultView];
     [_resultView mas_makeConstraints:^(MASConstraintMaker *make) {

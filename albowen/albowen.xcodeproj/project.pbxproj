@@ -50,6 +50,10 @@
 		DA8BB93321EB8BAA00506854 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB93221EB8BAA00506854 /* UserViewController.m */; };
 		DA8BB93621EB8BB600506854 /* DistailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB93521EB8BB600506854 /* DistailViewController.m */; };
 		DA8BB93921EB8BC200506854 /* MjViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB93821EB8BC200506854 /* MjViewController.m */; };
+		DA8BB94F21EF7C4B00506854 /* MineViewTabViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB94721EF7C4A00506854 /* MineViewTabViewCell.m */; };
+		DA8BB95021EF7C4B00506854 /* MineViewTopTabViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB94A21EF7C4A00506854 /* MineViewTopTabViewCell.m */; };
+		DA8BB95121EF7C4B00506854 /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB94B21EF7C4A00506854 /* MineView.m */; };
+		DA8BB95621EF7F7700506854 /* SelectPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB95521EF7F7600506854 /* SelectPhotoManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +163,14 @@
 		DA8BB93521EB8BB600506854 /* DistailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DistailViewController.m; sourceTree = "<group>"; };
 		DA8BB93721EB8BC200506854 /* MjViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MjViewController.h; sourceTree = "<group>"; };
 		DA8BB93821EB8BC200506854 /* MjViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MjViewController.m; sourceTree = "<group>"; };
+		DA8BB94521EF7C4A00506854 /* MineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineView.h; sourceTree = "<group>"; };
+		DA8BB94721EF7C4A00506854 /* MineViewTabViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewTabViewCell.m; sourceTree = "<group>"; };
+		DA8BB94821EF7C4A00506854 /* MineViewTopTabViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewTopTabViewCell.h; sourceTree = "<group>"; };
+		DA8BB94921EF7C4A00506854 /* MineViewTabViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewTabViewCell.h; sourceTree = "<group>"; };
+		DA8BB94A21EF7C4A00506854 /* MineViewTopTabViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewTopTabViewCell.m; sourceTree = "<group>"; };
+		DA8BB94B21EF7C4A00506854 /* MineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineView.m; sourceTree = "<group>"; };
+		DA8BB95421EF7F7600506854 /* SelectPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPhotoManager.h; sourceTree = "<group>"; };
+		DA8BB95521EF7F7600506854 /* SelectPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPhotoManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +364,7 @@
 		DA8BB8A221EA135200506854 /* albowen */ = {
 			isa = PBXGroup;
 			children = (
+				DA8BB95321EF7F7600506854 /* SelectPhotoManager */,
 				B01D38D721EDDA4700BC87B8 /* JsonDeal */,
 				B01D38B921EDD93300BC87B8 /* SearchViewController */,
 				B01D389221EDD7D500BC87B8 /* SearchResultViewController */,
@@ -482,6 +495,9 @@
 		DA8BB90A21EB607700506854 /* UserViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DA8BB94521EF7C4A00506854 /* MineView.h */,
+				DA8BB94B21EF7C4A00506854 /* MineView.m */,
+				DA8BB94621EF7C4A00506854 /* MineViewTabViewCell */,
 				DA8BB93121EB8BAA00506854 /* UserViewController.h */,
 				DA8BB93221EB8BAA00506854 /* UserViewController.m */,
 			);
@@ -504,6 +520,26 @@
 				DA8BB93821EB8BC200506854 /* MjViewController.m */,
 			);
 			path = MjViewController;
+			sourceTree = "<group>";
+		};
+		DA8BB94621EF7C4A00506854 /* MineViewTabViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB94721EF7C4A00506854 /* MineViewTabViewCell.m */,
+				DA8BB94821EF7C4A00506854 /* MineViewTopTabViewCell.h */,
+				DA8BB94921EF7C4A00506854 /* MineViewTabViewCell.h */,
+				DA8BB94A21EF7C4A00506854 /* MineViewTopTabViewCell.m */,
+			);
+			path = MineViewTabViewCell;
+			sourceTree = "<group>";
+		};
+		DA8BB95321EF7F7600506854 /* SelectPhotoManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB95421EF7F7600506854 /* SelectPhotoManager.h */,
+				DA8BB95521EF7F7600506854 /* SelectPhotoManager.m */,
+			);
+			path = SelectPhotoManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -683,6 +719,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8BB95621EF7F7700506854 /* SelectPhotoManager.m in Sources */,
 				DA8BB93321EB8BAA00506854 /* UserViewController.m in Sources */,
 				DA8BB8F221EA236D00506854 /* BaseView.m in Sources */,
 				DA8BB8A821EA135200506854 /* ViewController.m in Sources */,
@@ -716,9 +753,12 @@
 				DA8BB8EA21EA22CA00506854 /* RegisterNextViewController.m in Sources */,
 				DA8BB93621EB8BB600506854 /* DistailViewController.m in Sources */,
 				DA8BB8F821EA246000506854 /* JhlvShowAlertController.m in Sources */,
+				DA8BB95121EF7C4B00506854 /* MineView.m in Sources */,
 				DA8BB8E621EA22CA00506854 /* LoginViewController.m in Sources */,
 				B01D38D521EDD93300BC87B8 /* SearchResultView.m in Sources */,
 				DA8BB8E921EA22CA00506854 /* LoginInputView.m in Sources */,
+				DA8BB94F21EF7C4B00506854 /* MineViewTabViewCell.m in Sources */,
+				DA8BB95021EF7C4B00506854 /* MineViewTopTabViewCell.m in Sources */,
 				DA8BB91521EB632400506854 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
