@@ -1,5 +1,5 @@
 //
-//  MapTableViewCell.h
+//  PhoneTableViewCell.h
 //  albowen
 //
 //  Created by 关云秀 on 2019/1/18.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MapTableViewCell : UITableViewCell
+@interface PhoneTableViewCell : UITableViewCell
 
 @end
 

@@ -57,7 +57,6 @@
 		DA8BB95921F0B3CA00506854 /* ScrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB95821F0B3CA00506854 /* ScrTableViewCell.m */; };
 		DA8BB95C21F0B3FE00506854 /* NameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB95B21F0B3FE00506854 /* NameTableViewCell.m */; };
 		DA8BB95F21F0BCD900506854 /* TimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB95E21F0BCD900506854 /* TimeTableViewCell.m */; };
-		DA8BB96221F0BCE300506854 /* MapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB96121F0BCE300506854 /* MapTableViewCell.m */; };
 		DA8BB98021F0C0C000506854 /* SubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB96821F0C0C000506854 /* SubscribeViewController.m */; };
 		DA8BB98121F0C0C000506854 /* SubscribeViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB96D21F0C0C000506854 /* SubscribeViewModelClass.m */; };
 		DA8BB98221F0C0C000506854 /* SubscribeViewAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB97021F0C0C000506854 /* SubscribeViewAlertView.m */; };
@@ -74,6 +73,15 @@
 		DA8BB99E21F0C33800506854 /* NSDate+JKReporting.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB99321F0C33800506854 /* NSDate+JKReporting.m */; };
 		DA8BB99F21F0C33800506854 /* NSDate+JKZeroDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB99421F0C33800506854 /* NSDate+JKZeroDate.m */; };
 		DA8BB9A021F0C33800506854 /* NSDate+JKCupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB99821F0C33800506854 /* NSDate+JKCupertinoYankee.m */; };
+		DA8BB9A321F206FF00506854 /* PhoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9A221F206FF00506854 /* PhoneTableViewCell.m */; };
+		DA8BB9A921F2162500506854 /* MapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9A821F2162500506854 /* MapTableViewCell.m */; };
+		DA8BB9AD21F21A6D00506854 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9AB21F21A6C00506854 /* BaseNavigationController.m */; };
+		DA8BB9C221F2217800506854 /* MVClassInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9B021F2217700506854 /* MVClassInterface.m */; };
+		DA8BB9C321F2217800506854 /* MVClassController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9B421F2217800506854 /* MVClassController.m */; };
+		DA8BB9C521F2217800506854 /* MVClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9BB21F2217800506854 /* MVClassView.m */; };
+		DA8BB9C621F2217800506854 /* MVTieleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9BD21F2217800506854 /* MVTieleView.m */; };
+		DA8BB9C721F2217800506854 /* MVCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9C021F2217800506854 /* MVCollectionViewCell.m */; };
+		DA8BB9CA21F2225700506854 /* MvClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9C821F2225600506854 /* MvClassModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,8 +205,6 @@
 		DA8BB95B21F0B3FE00506854 /* NameTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NameTableViewCell.m; sourceTree = "<group>"; };
 		DA8BB95D21F0BCD900506854 /* TimeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeTableViewCell.h; sourceTree = "<group>"; };
 		DA8BB95E21F0BCD900506854 /* TimeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeTableViewCell.m; sourceTree = "<group>"; };
-		DA8BB96021F0BCE300506854 /* MapTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapTableViewCell.h; sourceTree = "<group>"; };
-		DA8BB96121F0BCE300506854 /* MapTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapTableViewCell.m; sourceTree = "<group>"; };
 		DA8BB96821F0C0C000506854 /* SubscribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewController.m; sourceTree = "<group>"; };
 		DA8BB96921F0C0C000506854 /* SubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewController.h; sourceTree = "<group>"; };
 		DA8BB96C21F0C0C000506854 /* SubscribeViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewModelClass.h; sourceTree = "<group>"; };
@@ -231,6 +237,24 @@
 		DA8BB99621F0C33800506854 /* NSDate+JKInternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKInternetDateTime.h"; sourceTree = "<group>"; };
 		DA8BB99721F0C33800506854 /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKExtension.h"; sourceTree = "<group>"; };
 		DA8BB99821F0C33800506854 /* NSDate+JKCupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCupertinoYankee.m"; sourceTree = "<group>"; };
+		DA8BB9A121F206FF00506854 /* PhoneTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneTableViewCell.h; sourceTree = "<group>"; };
+		DA8BB9A221F206FF00506854 /* PhoneTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneTableViewCell.m; sourceTree = "<group>"; };
+		DA8BB9A721F2162500506854 /* MapTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapTableViewCell.h; sourceTree = "<group>"; };
+		DA8BB9A821F2162500506854 /* MapTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapTableViewCell.m; sourceTree = "<group>"; };
+		DA8BB9AB21F21A6C00506854 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		DA8BB9AC21F21A6C00506854 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		DA8BB9B021F2217700506854 /* MVClassInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVClassInterface.m; sourceTree = "<group>"; };
+		DA8BB9B121F2217700506854 /* MVClassInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVClassInterface.h; sourceTree = "<group>"; };
+		DA8BB9B221F2217700506854 /* MVClassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVClassController.h; sourceTree = "<group>"; };
+		DA8BB9B421F2217800506854 /* MVClassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVClassController.m; sourceTree = "<group>"; };
+		DA8BB9BA21F2217800506854 /* MVClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVClassView.h; sourceTree = "<group>"; };
+		DA8BB9BB21F2217800506854 /* MVClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVClassView.m; sourceTree = "<group>"; };
+		DA8BB9BD21F2217800506854 /* MVTieleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVTieleView.m; sourceTree = "<group>"; };
+		DA8BB9BF21F2217800506854 /* MVCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCollectionViewCell.h; sourceTree = "<group>"; };
+		DA8BB9C021F2217800506854 /* MVCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVCollectionViewCell.m; sourceTree = "<group>"; };
+		DA8BB9C121F2217800506854 /* MVTieleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVTieleView.h; sourceTree = "<group>"; };
+		DA8BB9C821F2225600506854 /* MvClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MvClassModel.m; sourceTree = "<group>"; };
+		DA8BB9C921F2225700506854 /* MvClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MvClassModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,6 +448,7 @@
 		DA8BB8A221EA135200506854 /* albowen */ = {
 			isa = PBXGroup;
 			children = (
+				DA8BB9AE21F2217700506854 /* MVClassController */,
 				DA8BB95321EF7F7600506854 /* SelectPhotoManager */,
 				B01D38D721EDDA4700BC87B8 /* JsonDeal */,
 				B01D38B921EDD93300BC87B8 /* SearchViewController */,
@@ -445,6 +470,7 @@
 				DA8BB8F121EA236C00506854 /* BaseView.m */,
 				DA8BB92B21EB8B5500506854 /* BaseTabBarController.h */,
 				DA8BB92C21EB8B5500506854 /* BaseTabBarController.m */,
+				DA8BB9AA21F21A6C00506854 /* BaseNavViewController */,
 				B01D38E921EDDBFF00BC87B8 /* Assets.xcassets */,
 				DA8BB8A921EA135200506854 /* Main.storyboard */,
 				DA8BB8AE21EA135400506854 /* LaunchScreen.storyboard */,
@@ -578,8 +604,10 @@
 				DA8BB95B21F0B3FE00506854 /* NameTableViewCell.m */,
 				DA8BB95D21F0BCD900506854 /* TimeTableViewCell.h */,
 				DA8BB95E21F0BCD900506854 /* TimeTableViewCell.m */,
-				DA8BB96021F0BCE300506854 /* MapTableViewCell.h */,
-				DA8BB96121F0BCE300506854 /* MapTableViewCell.m */,
+				DA8BB9A121F206FF00506854 /* PhoneTableViewCell.h */,
+				DA8BB9A221F206FF00506854 /* PhoneTableViewCell.m */,
+				DA8BB9A721F2162500506854 /* MapTableViewCell.h */,
+				DA8BB9A821F2162500506854 /* MapTableViewCell.m */,
 			);
 			path = DistailViewController;
 			sourceTree = "<group>";
@@ -728,6 +756,74 @@
 				DA8BB99821F0C33800506854 /* NSDate+JKCupertinoYankee.m */,
 			);
 			path = NSDate;
+			sourceTree = "<group>";
+		};
+		DA8BB9AA21F21A6C00506854 /* BaseNavViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB9AB21F21A6C00506854 /* BaseNavigationController.m */,
+				DA8BB9AC21F21A6C00506854 /* BaseNavigationController.h */,
+			);
+			path = BaseNavViewController;
+			sourceTree = "<group>";
+		};
+		DA8BB9AE21F2217700506854 /* MVClassController */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB9B221F2217700506854 /* MVClassController.h */,
+				DA8BB9B421F2217800506854 /* MVClassController.m */,
+				DA8BB9AF21F2217700506854 /* Iterface */,
+				DA8BB9B821F2217800506854 /* Views */,
+			);
+			path = MVClassController;
+			sourceTree = "<group>";
+		};
+		DA8BB9AF21F2217700506854 /* Iterface */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB9C921F2225700506854 /* MvClassModel.h */,
+				DA8BB9C821F2225600506854 /* MvClassModel.m */,
+				DA8BB9B121F2217700506854 /* MVClassInterface.h */,
+				DA8BB9B021F2217700506854 /* MVClassInterface.m */,
+			);
+			path = Iterface;
+			sourceTree = "<group>";
+		};
+		DA8BB9B821F2217800506854 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB9B921F2217800506854 /* MVClassView */,
+				DA8BB9BC21F2217800506854 /* MVTieleView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DA8BB9B921F2217800506854 /* MVClassView */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB9BA21F2217800506854 /* MVClassView.h */,
+				DA8BB9BB21F2217800506854 /* MVClassView.m */,
+			);
+			path = MVClassView;
+			sourceTree = "<group>";
+		};
+		DA8BB9BC21F2217800506854 /* MVTieleView */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB9C121F2217800506854 /* MVTieleView.h */,
+				DA8BB9BD21F2217800506854 /* MVTieleView.m */,
+				DA8BB9BE21F2217800506854 /* MVCollectionViewCell */,
+			);
+			path = MVTieleView;
+			sourceTree = "<group>";
+		};
+		DA8BB9BE21F2217800506854 /* MVCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB9BF21F2217800506854 /* MVCollectionViewCell.h */,
+				DA8BB9C021F2217800506854 /* MVCollectionViewCell.m */,
+			);
+			path = MVCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -916,6 +1012,7 @@
 				DA8BB8A821EA135200506854 /* ViewController.m in Sources */,
 				DA8BB93921EB8BC200506854 /* MjViewController.m in Sources */,
 				DA8BB93021EB8B9C00506854 /* ListViewController.m in Sources */,
+				DA8BB9CA21F2225700506854 /* MvClassModel.m in Sources */,
 				B01D38D421EDD93300BC87B8 /* SearchHistroyTableViewCell.m in Sources */,
 				DA8BB8F921EA246000506854 /* CustomView.m in Sources */,
 				DA8BB99F21F0C33800506854 /* NSDate+JKZeroDate.m in Sources */,
@@ -923,13 +1020,15 @@
 				DA8BB99D21F0C33800506854 /* NSDate+JKUtilities.m in Sources */,
 				B01D38E621EDDA6A00BC87B8 /* HttpHelpBase.m in Sources */,
 				B01D38D221EDD93300BC87B8 /* SearchHotTableViewCell.m in Sources */,
+				DA8BB9A921F2162500506854 /* MapTableViewCell.m in Sources */,
 				B01D38D321EDD93300BC87B8 /* SearchHeaderView.m in Sources */,
 				DA8BB91921EB6EFC00506854 /* HomeView.m in Sources */,
 				DA8BB8EF21EA233A00506854 /* BaseViewController.m in Sources */,
 				DA8BB8E721EA22CA00506854 /* RegisterViewController.m in Sources */,
-				DA8BB96221F0BCE300506854 /* MapTableViewCell.m in Sources */,
+				DA8BB9C621F2217800506854 /* MVTieleView.m in Sources */,
 				B01D38CF21EDD93300BC87B8 /* SearchRequest.m in Sources */,
 				B01D38E521EDDA6A00BC87B8 /* HttpHelper.m in Sources */,
+				DA8BB9C221F2217800506854 /* MVClassInterface.m in Sources */,
 				DA8BB8E821EA22CA00506854 /* UserInfoClass.m in Sources */,
 				DA8BB98521F0C0C000506854 /* SubscribeViewCellHeaderView.m in Sources */,
 				DA8BB8B321EA135400506854 /* main.m in Sources */,
@@ -946,6 +1045,7 @@
 				B01D38D621EDD93300BC87B8 /* SearchTitleView.m in Sources */,
 				B01D38AF21EDD7D500BC87B8 /* SearchResultViewController.m in Sources */,
 				DA8BB8A521EA135200506854 /* AppDelegate.m in Sources */,
+				DA8BB9C321F2217800506854 /* MVClassController.m in Sources */,
 				B01D38DA21EDDA4700BC87B8 /* JsonDeal.m in Sources */,
 				B01D38D121EDD93300BC87B8 /* SearchHistroyView.m in Sources */,
 				DA8BB99921F0C33800506854 /* NSDate+JKLunarCalendar.m in Sources */,
@@ -953,9 +1053,11 @@
 				DA8BB92A21EB887500506854 /* HomeTableViewCell.m in Sources */,
 				DA8BB8EA21EA22CA00506854 /* RegisterNextViewController.m in Sources */,
 				DA8BB93621EB8BB600506854 /* DistailViewController.m in Sources */,
+				DA8BB9A321F206FF00506854 /* PhoneTableViewCell.m in Sources */,
 				DA8BB8F821EA246000506854 /* JhlvShowAlertController.m in Sources */,
 				DA8BB98721F0C0C000506854 /* SubscribeViewBottomCell.m in Sources */,
 				DA8BB95121EF7C4B00506854 /* MineView.m in Sources */,
+				DA8BB9AD21F21A6D00506854 /* BaseNavigationController.m in Sources */,
 				DA8BB8E621EA22CA00506854 /* LoginViewController.m in Sources */,
 				DA8BB95921F0B3CA00506854 /* ScrTableViewCell.m in Sources */,
 				B01D38D521EDD93300BC87B8 /* SearchResultView.m in Sources */,
@@ -964,9 +1066,11 @@
 				DA8BB8E921EA22CA00506854 /* LoginInputView.m in Sources */,
 				DA8BB98421F0C0C000506854 /* SubscribeViewCellFooterView.m in Sources */,
 				DA8BB99A21F0C33800506854 /* NSDate+JKExtension.m in Sources */,
+				DA8BB9C521F2217800506854 /* MVClassView.m in Sources */,
 				DA8BB94F21EF7C4B00506854 /* MineViewTabViewCell.m in Sources */,
 				DA8BB98321F0C0C000506854 /* SubscribeView.m in Sources */,
 				DA8BB95021EF7C4B00506854 /* MineViewTopTabViewCell.m in Sources */,
+				DA8BB9C721F2217800506854 /* MVCollectionViewCell.m in Sources */,
 				DA8BB91521EB632400506854 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

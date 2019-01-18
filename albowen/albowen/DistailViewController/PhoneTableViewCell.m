@@ -1,22 +1,21 @@
 //
-//  MapTableViewCell.m
+//  PhoneTableViewCell.m
 //  albowen
 //
 //  Created by 关云秀 on 2019/1/18.
 //  Copyright © 2019 xuannalisha. All rights reserved.
 //
 
-#import "MapTableViewCell.h"
+#import "PhoneTableViewCell.h"
 
-@interface MapTableViewCell()
+@interface PhoneTableViewCell()
 
 @property (nonatomic, strong)UILabel *dianhua;
 @property (nonatomic, strong)UIImageView *dianhuaImage;
-
 @end
 
+@implementation PhoneTableViewCell
 
-@implementation MapTableViewCell
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -34,7 +33,7 @@
         }];
         
         _dianhua = [UILabel new];
-        _dianhua.text = @"开始导航";
+        _dianhua.text = @"服务电话:0351-1234567";
         _dianhua.font = [UIFont systemFontOfSize:15];
         [self.contentView addSubview:_dianhua];
         [_dianhua mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -45,6 +44,7 @@
     
     return self;
 }
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

@@ -9,6 +9,7 @@
 #import "HomeView.h"
 #import "MainTableViewCell.h"
 #import "HomeTableViewCell.h"
+#import "DistailViewController.h"
 
 @interface HomeView()
 
@@ -109,7 +110,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    NSDictionary *dic = _resource[indexPath.row];
+    ResourceClass *model = [ResourceClass mj_objectWithKeyValues:dic];
+    DistailViewController *vc = [DistailViewController new];
+    vc.model = model;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.viewController.navigationController pushViewController:vc animated:YES];
 }
 
 @end

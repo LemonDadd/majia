@@ -8,9 +8,10 @@
 
 #import "BaseTabBarController.h"
 #import "HomeViewController.h"
-#import "ListViewController.h"
+#import "MVClassController.h"
 #import "SearchViewController.h"
 #import "UserViewController.h"
+#import "BaseNavigationController.h"
 
 
 @interface BaseTabBarController ()
@@ -26,7 +27,7 @@
     HomeViewController *home = [HomeViewController new];
     [self addChildVc:home title:@"ที่หน้าแรก" image:@"home_icon" selectedImage:@"home_icon_true"];
     
-    ListViewController *guide = [ListViewController new];
+    MVClassController *guide = [MVClassController new];
     [self addChildVc:guide title:@"รายชื่อ" image:@"zhdl_icon" selectedImage:@"zhdl_icon_true"];
     
     SearchViewController *interact = [SearchViewController new];
@@ -63,9 +64,10 @@
     selectTextAttrs[NSForegroundColorAttributeName] =[UIColor colorWithNumber:0X804000];
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
-    [[UINavigationBar appearance]setTintColor:[UIColor colorWithNumber:MCOLOR]];
+    
+
     // 先给外面传进来的小控制器 包装 一个导航控制器
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];
+    BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:childVc];
     // 添加为子控制器
     [self addChildViewController:nav];
 }
