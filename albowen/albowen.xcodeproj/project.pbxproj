@@ -54,6 +54,26 @@
 		DA8BB95021EF7C4B00506854 /* MineViewTopTabViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB94A21EF7C4A00506854 /* MineViewTopTabViewCell.m */; };
 		DA8BB95121EF7C4B00506854 /* MineView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB94B21EF7C4A00506854 /* MineView.m */; };
 		DA8BB95621EF7F7700506854 /* SelectPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB95521EF7F7600506854 /* SelectPhotoManager.m */; };
+		DA8BB95921F0B3CA00506854 /* ScrTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB95821F0B3CA00506854 /* ScrTableViewCell.m */; };
+		DA8BB95C21F0B3FE00506854 /* NameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB95B21F0B3FE00506854 /* NameTableViewCell.m */; };
+		DA8BB95F21F0BCD900506854 /* TimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB95E21F0BCD900506854 /* TimeTableViewCell.m */; };
+		DA8BB96221F0BCE300506854 /* MapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB96121F0BCE300506854 /* MapTableViewCell.m */; };
+		DA8BB98021F0C0C000506854 /* SubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB96821F0C0C000506854 /* SubscribeViewController.m */; };
+		DA8BB98121F0C0C000506854 /* SubscribeViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB96D21F0C0C000506854 /* SubscribeViewModelClass.m */; };
+		DA8BB98221F0C0C000506854 /* SubscribeViewAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB97021F0C0C000506854 /* SubscribeViewAlertView.m */; };
+		DA8BB98321F0C0C000506854 /* SubscribeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB97121F0C0C000506854 /* SubscribeView.m */; };
+		DA8BB98421F0C0C000506854 /* SubscribeViewCellFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB97521F0C0C000506854 /* SubscribeViewCellFooterView.m */; };
+		DA8BB98521F0C0C000506854 /* SubscribeViewCellHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB97721F0C0C000506854 /* SubscribeViewCellHeaderView.m */; };
+		DA8BB98621F0C0C000506854 /* SubscribeViewTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB97A21F0C0C000506854 /* SubscribeViewTopCell.m */; };
+		DA8BB98721F0C0C000506854 /* SubscribeViewBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB97E21F0C0C000506854 /* SubscribeViewBottomCell.m */; };
+		DA8BB99921F0C33800506854 /* NSDate+JKLunarCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB98D21F0C33800506854 /* NSDate+JKLunarCalendar.m */; };
+		DA8BB99A21F0C33800506854 /* NSDate+JKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB98F21F0C33800506854 /* NSDate+JKExtension.m */; };
+		DA8BB99B21F0C33800506854 /* NSDate+JKInternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB99021F0C33800506854 /* NSDate+JKInternetDateTime.m */; };
+		DA8BB99C21F0C33800506854 /* NSDate+JKFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB99121F0C33800506854 /* NSDate+JKFormatter.m */; };
+		DA8BB99D21F0C33800506854 /* NSDate+JKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB99221F0C33800506854 /* NSDate+JKUtilities.m */; };
+		DA8BB99E21F0C33800506854 /* NSDate+JKReporting.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB99321F0C33800506854 /* NSDate+JKReporting.m */; };
+		DA8BB99F21F0C33800506854 /* NSDate+JKZeroDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB99421F0C33800506854 /* NSDate+JKZeroDate.m */; };
+		DA8BB9A021F0C33800506854 /* NSDate+JKCupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB99821F0C33800506854 /* NSDate+JKCupertinoYankee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +191,46 @@
 		DA8BB94B21EF7C4A00506854 /* MineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineView.m; sourceTree = "<group>"; };
 		DA8BB95421EF7F7600506854 /* SelectPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPhotoManager.h; sourceTree = "<group>"; };
 		DA8BB95521EF7F7600506854 /* SelectPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPhotoManager.m; sourceTree = "<group>"; };
+		DA8BB95721F0B3CA00506854 /* ScrTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrTableViewCell.h; sourceTree = "<group>"; };
+		DA8BB95821F0B3CA00506854 /* ScrTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrTableViewCell.m; sourceTree = "<group>"; };
+		DA8BB95A21F0B3FE00506854 /* NameTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NameTableViewCell.h; sourceTree = "<group>"; };
+		DA8BB95B21F0B3FE00506854 /* NameTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NameTableViewCell.m; sourceTree = "<group>"; };
+		DA8BB95D21F0BCD900506854 /* TimeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeTableViewCell.h; sourceTree = "<group>"; };
+		DA8BB95E21F0BCD900506854 /* TimeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeTableViewCell.m; sourceTree = "<group>"; };
+		DA8BB96021F0BCE300506854 /* MapTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapTableViewCell.h; sourceTree = "<group>"; };
+		DA8BB96121F0BCE300506854 /* MapTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapTableViewCell.m; sourceTree = "<group>"; };
+		DA8BB96821F0C0C000506854 /* SubscribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewController.m; sourceTree = "<group>"; };
+		DA8BB96921F0C0C000506854 /* SubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewController.h; sourceTree = "<group>"; };
+		DA8BB96C21F0C0C000506854 /* SubscribeViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewModelClass.h; sourceTree = "<group>"; };
+		DA8BB96D21F0C0C000506854 /* SubscribeViewModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewModelClass.m; sourceTree = "<group>"; };
+		DA8BB96F21F0C0C000506854 /* SubscribeViewAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewAlertView.h; sourceTree = "<group>"; };
+		DA8BB97021F0C0C000506854 /* SubscribeViewAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewAlertView.m; sourceTree = "<group>"; };
+		DA8BB97121F0C0C000506854 /* SubscribeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeView.m; sourceTree = "<group>"; };
+		DA8BB97421F0C0C000506854 /* SubscribeViewCellFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewCellFooterView.h; sourceTree = "<group>"; };
+		DA8BB97521F0C0C000506854 /* SubscribeViewCellFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewCellFooterView.m; sourceTree = "<group>"; };
+		DA8BB97721F0C0C000506854 /* SubscribeViewCellHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewCellHeaderView.m; sourceTree = "<group>"; };
+		DA8BB97821F0C0C000506854 /* SubscribeViewCellHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewCellHeaderView.h; sourceTree = "<group>"; };
+		DA8BB97A21F0C0C000506854 /* SubscribeViewTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewTopCell.m; sourceTree = "<group>"; };
+		DA8BB97B21F0C0C000506854 /* SubscribeViewTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewTopCell.h; sourceTree = "<group>"; };
+		DA8BB97D21F0C0C000506854 /* SubscribeViewBottomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeViewBottomCell.h; sourceTree = "<group>"; };
+		DA8BB97E21F0C0C000506854 /* SubscribeViewBottomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeViewBottomCell.m; sourceTree = "<group>"; };
+		DA8BB97F21F0C0C000506854 /* SubscribeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeView.h; sourceTree = "<group>"; };
+		DA8BB98921F0C33800506854 /* NSDate+JKZeroDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKZeroDate.h"; sourceTree = "<group>"; };
+		DA8BB98A21F0C33800506854 /* NSDate+JKReporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKReporting.h"; sourceTree = "<group>"; };
+		DA8BB98B21F0C33800506854 /* NSDate+JKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKUtilities.h"; sourceTree = "<group>"; };
+		DA8BB98C21F0C33800506854 /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKFormatter.h"; sourceTree = "<group>"; };
+		DA8BB98D21F0C33800506854 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
+		DA8BB98E21F0C33800506854 /* NSDate+JKCupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCupertinoYankee.h"; sourceTree = "<group>"; };
+		DA8BB98F21F0C33800506854 /* NSDate+JKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKExtension.m"; sourceTree = "<group>"; };
+		DA8BB99021F0C33800506854 /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
+		DA8BB99121F0C33800506854 /* NSDate+JKFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKFormatter.m"; sourceTree = "<group>"; };
+		DA8BB99221F0C33800506854 /* NSDate+JKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKUtilities.m"; sourceTree = "<group>"; };
+		DA8BB99321F0C33800506854 /* NSDate+JKReporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKReporting.m"; sourceTree = "<group>"; };
+		DA8BB99421F0C33800506854 /* NSDate+JKZeroDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKZeroDate.m"; sourceTree = "<group>"; };
+		DA8BB99521F0C33800506854 /* NSDate+JKLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKLunarCalendar.h"; sourceTree = "<group>"; };
+		DA8BB99621F0C33800506854 /* NSDate+JKInternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKInternetDateTime.h"; sourceTree = "<group>"; };
+		DA8BB99721F0C33800506854 /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKExtension.h"; sourceTree = "<group>"; };
+		DA8BB99821F0C33800506854 /* NSDate+JKCupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCupertinoYankee.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +454,7 @@
 				DA8BB8FB21EA259E00506854 /* setting.h */,
 				B01D38EE21EF27CD00BC87B8 /* ResourceClass.h */,
 				B01D38EF21EF27CD00BC87B8 /* ResourceClass.m */,
+				DA8BB98821F0C33800506854 /* NSDate */,
 			);
 			path = albowen;
 			sourceTree = "<group>";
@@ -507,8 +568,18 @@
 		DA8BB90B21EB607A00506854 /* DistailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DA8BB96721F0C0C000506854 /* SubscribeViewController */,
+				DA8BB96621F0BF7E00506854 /* SuccessViewController */,
 				DA8BB93421EB8BB600506854 /* DistailViewController.h */,
 				DA8BB93521EB8BB600506854 /* DistailViewController.m */,
+				DA8BB95721F0B3CA00506854 /* ScrTableViewCell.h */,
+				DA8BB95821F0B3CA00506854 /* ScrTableViewCell.m */,
+				DA8BB95A21F0B3FE00506854 /* NameTableViewCell.h */,
+				DA8BB95B21F0B3FE00506854 /* NameTableViewCell.m */,
+				DA8BB95D21F0BCD900506854 /* TimeTableViewCell.h */,
+				DA8BB95E21F0BCD900506854 /* TimeTableViewCell.m */,
+				DA8BB96021F0BCE300506854 /* MapTableViewCell.h */,
+				DA8BB96121F0BCE300506854 /* MapTableViewCell.m */,
 			);
 			path = DistailViewController;
 			sourceTree = "<group>";
@@ -540,6 +611,123 @@
 				DA8BB95521EF7F7600506854 /* SelectPhotoManager.m */,
 			);
 			path = SelectPhotoManager;
+			sourceTree = "<group>";
+		};
+		DA8BB96621F0BF7E00506854 /* SuccessViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SuccessViewController;
+			sourceTree = "<group>";
+		};
+		DA8BB96721F0C0C000506854 /* SubscribeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB96821F0C0C000506854 /* SubscribeViewController.m */,
+				DA8BB96921F0C0C000506854 /* SubscribeViewController.h */,
+				DA8BB96A21F0C0C000506854 /* SubscribeView */,
+			);
+			path = SubscribeViewController;
+			sourceTree = "<group>";
+		};
+		DA8BB96A21F0C0C000506854 /* SubscribeView */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB96B21F0C0C000506854 /* SubscribeViewModelClass */,
+				DA8BB96E21F0C0C000506854 /* SubscribeViewAlertView */,
+				DA8BB97F21F0C0C000506854 /* SubscribeView.h */,
+				DA8BB97121F0C0C000506854 /* SubscribeView.m */,
+				DA8BB97221F0C0C000506854 /* SubscribeViewCell */,
+			);
+			path = SubscribeView;
+			sourceTree = "<group>";
+		};
+		DA8BB96B21F0C0C000506854 /* SubscribeViewModelClass */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB96C21F0C0C000506854 /* SubscribeViewModelClass.h */,
+				DA8BB96D21F0C0C000506854 /* SubscribeViewModelClass.m */,
+			);
+			path = SubscribeViewModelClass;
+			sourceTree = "<group>";
+		};
+		DA8BB96E21F0C0C000506854 /* SubscribeViewAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB96F21F0C0C000506854 /* SubscribeViewAlertView.h */,
+				DA8BB97021F0C0C000506854 /* SubscribeViewAlertView.m */,
+			);
+			path = SubscribeViewAlertView;
+			sourceTree = "<group>";
+		};
+		DA8BB97221F0C0C000506854 /* SubscribeViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB97321F0C0C000506854 /* SubscribeViewCellFooterView */,
+				DA8BB97621F0C0C000506854 /* SubscribeViewCellHeaderView */,
+				DA8BB97921F0C0C000506854 /* SubscribeViewTopCell */,
+				DA8BB97C21F0C0C000506854 /* SubscribeViewBottomCell */,
+			);
+			path = SubscribeViewCell;
+			sourceTree = "<group>";
+		};
+		DA8BB97321F0C0C000506854 /* SubscribeViewCellFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB97421F0C0C000506854 /* SubscribeViewCellFooterView.h */,
+				DA8BB97521F0C0C000506854 /* SubscribeViewCellFooterView.m */,
+			);
+			path = SubscribeViewCellFooterView;
+			sourceTree = "<group>";
+		};
+		DA8BB97621F0C0C000506854 /* SubscribeViewCellHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB97721F0C0C000506854 /* SubscribeViewCellHeaderView.m */,
+				DA8BB97821F0C0C000506854 /* SubscribeViewCellHeaderView.h */,
+			);
+			path = SubscribeViewCellHeaderView;
+			sourceTree = "<group>";
+		};
+		DA8BB97921F0C0C000506854 /* SubscribeViewTopCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB97A21F0C0C000506854 /* SubscribeViewTopCell.m */,
+				DA8BB97B21F0C0C000506854 /* SubscribeViewTopCell.h */,
+			);
+			path = SubscribeViewTopCell;
+			sourceTree = "<group>";
+		};
+		DA8BB97C21F0C0C000506854 /* SubscribeViewBottomCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB97D21F0C0C000506854 /* SubscribeViewBottomCell.h */,
+				DA8BB97E21F0C0C000506854 /* SubscribeViewBottomCell.m */,
+			);
+			path = SubscribeViewBottomCell;
+			sourceTree = "<group>";
+		};
+		DA8BB98821F0C33800506854 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				DA8BB98921F0C33800506854 /* NSDate+JKZeroDate.h */,
+				DA8BB98A21F0C33800506854 /* NSDate+JKReporting.h */,
+				DA8BB98B21F0C33800506854 /* NSDate+JKUtilities.h */,
+				DA8BB98C21F0C33800506854 /* NSDate+JKFormatter.h */,
+				DA8BB98D21F0C33800506854 /* NSDate+JKLunarCalendar.m */,
+				DA8BB98E21F0C33800506854 /* NSDate+JKCupertinoYankee.h */,
+				DA8BB98F21F0C33800506854 /* NSDate+JKExtension.m */,
+				DA8BB99021F0C33800506854 /* NSDate+JKInternetDateTime.m */,
+				DA8BB99121F0C33800506854 /* NSDate+JKFormatter.m */,
+				DA8BB99221F0C33800506854 /* NSDate+JKUtilities.m */,
+				DA8BB99321F0C33800506854 /* NSDate+JKReporting.m */,
+				DA8BB99421F0C33800506854 /* NSDate+JKZeroDate.m */,
+				DA8BB99521F0C33800506854 /* NSDate+JKLunarCalendar.h */,
+				DA8BB99621F0C33800506854 /* NSDate+JKInternetDateTime.h */,
+				DA8BB99721F0C33800506854 /* NSDate+JKExtension.h */,
+				DA8BB99821F0C33800506854 /* NSDate+JKCupertinoYankee.m */,
+			);
+			path = NSDate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -722,42 +910,62 @@
 				DA8BB95621EF7F7700506854 /* SelectPhotoManager.m in Sources */,
 				DA8BB93321EB8BAA00506854 /* UserViewController.m in Sources */,
 				DA8BB8F221EA236D00506854 /* BaseView.m in Sources */,
+				DA8BB99B21F0C33800506854 /* NSDate+JKInternetDateTime.m in Sources */,
+				DA8BB98221F0C0C000506854 /* SubscribeViewAlertView.m in Sources */,
+				DA8BB98121F0C0C000506854 /* SubscribeViewModelClass.m in Sources */,
 				DA8BB8A821EA135200506854 /* ViewController.m in Sources */,
 				DA8BB93921EB8BC200506854 /* MjViewController.m in Sources */,
 				DA8BB93021EB8B9C00506854 /* ListViewController.m in Sources */,
 				B01D38D421EDD93300BC87B8 /* SearchHistroyTableViewCell.m in Sources */,
 				DA8BB8F921EA246000506854 /* CustomView.m in Sources */,
+				DA8BB99F21F0C33800506854 /* NSDate+JKZeroDate.m in Sources */,
 				B01D38F021EF27CD00BC87B8 /* ResourceClass.m in Sources */,
+				DA8BB99D21F0C33800506854 /* NSDate+JKUtilities.m in Sources */,
 				B01D38E621EDDA6A00BC87B8 /* HttpHelpBase.m in Sources */,
 				B01D38D221EDD93300BC87B8 /* SearchHotTableViewCell.m in Sources */,
 				B01D38D321EDD93300BC87B8 /* SearchHeaderView.m in Sources */,
 				DA8BB91921EB6EFC00506854 /* HomeView.m in Sources */,
 				DA8BB8EF21EA233A00506854 /* BaseViewController.m in Sources */,
 				DA8BB8E721EA22CA00506854 /* RegisterViewController.m in Sources */,
+				DA8BB96221F0BCE300506854 /* MapTableViewCell.m in Sources */,
 				B01D38CF21EDD93300BC87B8 /* SearchRequest.m in Sources */,
 				B01D38E521EDDA6A00BC87B8 /* HttpHelper.m in Sources */,
 				DA8BB8E821EA22CA00506854 /* UserInfoClass.m in Sources */,
+				DA8BB98521F0C0C000506854 /* SubscribeViewCellHeaderView.m in Sources */,
 				DA8BB8B321EA135400506854 /* main.m in Sources */,
 				B01D38D021EDD93300BC87B8 /* SearchViewController.m in Sources */,
+				DA8BB95F21F0BCD900506854 /* TimeTableViewCell.m in Sources */,
+				DA8BB95C21F0B3FE00506854 /* NameTableViewCell.m in Sources */,
 				DA8BB92221EB762A00506854 /* MainTableViewCell.m in Sources */,
+				DA8BB9A021F0C33800506854 /* NSDate+JKCupertinoYankee.m in Sources */,
 				B01D38E821EDDA6A00BC87B8 /* NHFUpLoadImages.m in Sources */,
 				B01D38E721EDDA6A00BC87B8 /* NHFDownImages.m in Sources */,
+				DA8BB98621F0C0C000506854 /* SubscribeViewTopCell.m in Sources */,
+				DA8BB99E21F0C33800506854 /* NSDate+JKReporting.m in Sources */,
 				DA8BB92D21EB8B5500506854 /* BaseTabBarController.m in Sources */,
 				B01D38D621EDD93300BC87B8 /* SearchTitleView.m in Sources */,
 				B01D38AF21EDD7D500BC87B8 /* SearchResultViewController.m in Sources */,
 				DA8BB8A521EA135200506854 /* AppDelegate.m in Sources */,
 				B01D38DA21EDDA4700BC87B8 /* JsonDeal.m in Sources */,
 				B01D38D121EDD93300BC87B8 /* SearchHistroyView.m in Sources */,
+				DA8BB99921F0C33800506854 /* NSDate+JKLunarCalendar.m in Sources */,
 				B01D38B021EDD7D500BC87B8 /* SearchResultTableViewCell.m in Sources */,
 				DA8BB92A21EB887500506854 /* HomeTableViewCell.m in Sources */,
 				DA8BB8EA21EA22CA00506854 /* RegisterNextViewController.m in Sources */,
 				DA8BB93621EB8BB600506854 /* DistailViewController.m in Sources */,
 				DA8BB8F821EA246000506854 /* JhlvShowAlertController.m in Sources */,
+				DA8BB98721F0C0C000506854 /* SubscribeViewBottomCell.m in Sources */,
 				DA8BB95121EF7C4B00506854 /* MineView.m in Sources */,
 				DA8BB8E621EA22CA00506854 /* LoginViewController.m in Sources */,
+				DA8BB95921F0B3CA00506854 /* ScrTableViewCell.m in Sources */,
 				B01D38D521EDD93300BC87B8 /* SearchResultView.m in Sources */,
+				DA8BB98021F0C0C000506854 /* SubscribeViewController.m in Sources */,
+				DA8BB99C21F0C33800506854 /* NSDate+JKFormatter.m in Sources */,
 				DA8BB8E921EA22CA00506854 /* LoginInputView.m in Sources */,
+				DA8BB98421F0C0C000506854 /* SubscribeViewCellFooterView.m in Sources */,
+				DA8BB99A21F0C33800506854 /* NSDate+JKExtension.m in Sources */,
 				DA8BB94F21EF7C4B00506854 /* MineViewTabViewCell.m in Sources */,
+				DA8BB98321F0C0C000506854 /* SubscribeView.m in Sources */,
 				DA8BB95021EF7C4B00506854 /* MineViewTopTabViewCell.m in Sources */,
 				DA8BB91521EB632400506854 /* HomeViewController.m in Sources */,
 			);

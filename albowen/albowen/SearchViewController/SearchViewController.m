@@ -25,6 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.titleView = self.searchTitleView;
+    
     _resultView = [SearchResultView new];
     [self.view addSubview:_resultView];
     [_resultView mas_makeConstraints:^(MASConstraintMaker *make) {

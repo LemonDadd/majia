@@ -41,6 +41,22 @@
 
 #define K_H_TextCOLOR KCOLOR(162, 164, 161)
 
+// 屏宽
+#define kScreenWidth \
+([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? [UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale : [UIScreen mainScreen].bounds.size.width)
+// 屏高
+#define kScreenHeight \
+([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? [UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale : [UIScreen mainScreen].bounds.size.height)
+// 屏的size(宽、高)
+#define kScreenSize \
+([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale) : [UIScreen mainScreen].bounds.size)
+
+//适配不同机型的View大小
+#define kWidth(R) (R)*(kScreenWidth)/375 //这里的320我是针对5s为标准适配的,如果需要其他标准可以修改
+#define kHeight(R) (R)*(kScreenHeight)/667
+#define font(R) (R)*(kScreenWidth)/375.0
+
+
 // 16进制形式
 #define kColorWithHex(hexValue) \
 [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.0 \
