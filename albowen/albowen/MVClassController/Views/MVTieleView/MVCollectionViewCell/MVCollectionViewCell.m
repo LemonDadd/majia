@@ -88,8 +88,8 @@
 
 - (void)setModel:(MvListModel *)model {
     _model = model;
-    [_bgImageView sd_setImageWithURL:[NSURL URLWithString:model.img]];
-    [_picImageView sd_setImageWithURL:[NSURL URLWithString:model.headimg]];
+    [_bgImageView sd_setImageWithURL:[NSURL URLWithString:model.img] placeholderImage:Def];
+    [_picImageView sd_setImageWithURL:[NSURL URLWithString:model.headimg] placeholderImage:Def];
     _nameLabel.text = model.user;
     _locationLabel.text = model.address;
     _titleLabel.text = model.title;

@@ -25,19 +25,19 @@
     // Do any additional setup after loading the view.
     // Do any additional setup after loading the view.
     HomeViewController *home = [HomeViewController new];
-    [self addChildVc:home title:@"ที่หน้าแรก" image:@"home_icon" selectedImage:@"home_icon_true"];
+    [self addChildVc:home title:@"ที่หน้าแรก" image:@"taikong-N" selectedImage:@"taikong"];
     
     MVClassController *guide = [MVClassController new];
-    [self addChildVc:guide title:@"รายชื่อ" image:@"zhdl_icon" selectedImage:@"zhdl_icon_true"];
+    [self addChildVc:guide title:@"รายชื่อ" image:@"liebiao-N" selectedImage:@"liebiao"];
     
     SearchViewController *interact = [SearchViewController new];
-    [self addChildVc:interact title:@"ค้นหา" image:@"tyhd_icon" selectedImage:@"tyhd_icon_true"];
+    [self addChildVc:interact title:@"ค้นหา" image:@"sousuo-N" selectedImage:@"sousuo"];
     
     //    StaffViewController *staff = [StaffViewController new];
     //    [self addChildViewControllerByController:staff Title:@"首页" Image:nil];
     
     UserViewController *mine = [UserViewController new];
-    [self addChildVc:mine title:@"ฉัน" image:@"mine_icon" selectedImage:@"mine_icon_true"];
+    [self addChildVc:mine title:@"ฉัน" image:@"wode-N" selectedImage:@"wode"];
 }
 
 - (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
@@ -61,7 +61,7 @@
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] =[UIColor colorWithNumber:0x3a3a3a];
     NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
-    selectTextAttrs[NSForegroundColorAttributeName] =[UIColor colorWithNumber:0X804000];
+    selectTextAttrs[NSForegroundColorAttributeName] =[UIColor colorWithNumber:MCOLOR];
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
     

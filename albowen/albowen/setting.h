@@ -41,6 +41,8 @@
 
 #define K_H_TextCOLOR KCOLOR(162, 164, 161)
 
+#define Def [UIImage imageNamed:@"morentupian"]
+
 // 屏宽
 #define kScreenWidth \
 ([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? [UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale : [UIScreen mainScreen].bounds.size.width)

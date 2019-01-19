@@ -35,9 +35,6 @@
         [_mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self);
         }];
-        
-//        _imageArray = @[@[@"my_buy_icon",@"my_yuyue_icon",@"my_love_icon",@"my_active_icon"],@[@"my_set_icon",@"my_delete_icon"],@[@"my_about_icon",@"my_phone_icon"]];
-//        _titleArray =@[@[@"我的购买",@"我的预约",@"我的收藏",@"我的活动"],@[@"系统设置",@"清除缓存"],@[@"关于我们",@"服务咨询"]];
         _imageArray = @[@[@"my_yuyue_icon",@"my_love_icon"],@[@"my_set_icon",@"my_delete_icon"],@[@"my_about_icon",@"my_phone_icon"]];
         _titleArray =@[@[@"我的预约",@"我的收藏"],@[@"系统设置",@"清除缓存"],@[@"关于我们",@"服务咨询"]];
     }
@@ -75,10 +72,10 @@
         UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(headerImageViewEvent:)];
         [cell.headerImageView addGestureRecognizer:gr];
         if ([UserInfoClass getUserInfoClass] == nil) {
-            cell.headerImageView.image = [UIImage imageNamed:@"icon_logo"];
+            cell.headerImageView.image = [UIImage imageNamed:@"morentupian"];
             cell.nameLabel.text = @"请点击登录";
         } else {
-            [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[UserInfoClass getUserInfoClass].headimg]] placeholderImage:[UIImage imageNamed:@"icon_logo"]];
+            [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[UserInfoClass getUserInfoClass].headimg]] placeholderImage:Def];
             cell.nameLabel.text =[UserInfoClass getUserInfoClass].nickname;
         }
         return cell;

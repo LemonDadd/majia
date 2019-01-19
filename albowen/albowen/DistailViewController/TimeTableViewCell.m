@@ -26,20 +26,38 @@
     if (self) {
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        UIImageView *a = [UIImageView new];
+        a.image = [UIImage imageNamed:@"haofangtuo"];
+        [self.contentView addSubview:a];
+        [a mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.equalTo(self.contentView).offset(10);
+        }];
+        
         _ruzhu = [UILabel new];
         _ruzhu.font = [UIFont systemFontOfSize:15];
         [self.contentView addSubview:_ruzhu];
         [_ruzhu mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.equalTo(self.contentView).offset(10);
+            make.centerY.equalTo(a);
+            make.left.equalTo(a.mas_right).offset(5);
+        }];
+        
+        
+        UIImageView *b = [UIImageView new];
+        b.image = [UIImage imageNamed:@"lidianshijian"];
+        [self.contentView addSubview:b];
+        [b mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(a);
+            make.top.equalTo(a.mas_bottom).offset(8);
+            make.bottom.equalTo(self.contentView).offset(-10);
         }];
         
         _lidian = [UILabel new];
         _lidian.font = [UIFont systemFontOfSize:15];
         [self.contentView addSubview:_lidian];
         [_lidian mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.ruzhu.mas_bottom).offset(8);
             make.left.equalTo(self.ruzhu);
-            make.bottom.equalTo(self.contentView).offset(-10);
+            make.centerY.equalTo(b);
         }];
         
         _fangjian = [UILabel new];
@@ -52,6 +70,7 @@
         
         
         UIImageView *rom = [UIImageView new];
+        rom.image = [UIImage imageNamed:@"fangjian"];
         [self.contentView addSubview:rom];
         [rom mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.fangjian);

@@ -25,6 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = @"รายละเอียด";
+    
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(shouc:) forControlEvents:UIControlEventTouchUpInside];

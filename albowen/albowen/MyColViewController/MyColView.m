@@ -1,23 +1,18 @@
 //
-//  HomeView.m
+//  MyColView.m
 //  albowen
 //
-//  Created by 关云秀 on 2019/1/13.
+//  Created by quanqiuwa on 2019/1/19.
 //  Copyright © 2019 xuannalisha. All rights reserved.
 //
 
-#import "HomeView.h"
-#import "MainTableViewCell.h"
+#import "MyColView.h"
 #import "HomeTableViewCell.h"
 #import "DistailViewController.h"
 
-@interface HomeView()
 
-@property (nonatomic, strong)NSArray *resource;
 
-@end
-
-@implementation HomeView
+@implementation MyColView
 
 - (instancetype)init
 {
@@ -65,33 +60,21 @@
 #pragma mark - tableViewDelegateBegin
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return _resource.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 1;
-    }
-    return _resource.count;
+     return 1;
 }
 
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 1;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    if (indexPath.section ==0) {
-        MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainTableViewCell"];
-        if (cell == nil) {
-            cell = [[MainTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MainTableViewCell"];
-        }
-         return cell;
-    }
-    if (indexPath.section ==1) {
         HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCell"];
         if (cell == nil) {
             cell = [[HomeTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HomeTableViewCell"];
@@ -103,8 +86,6 @@
         cell.disLabel.text = model.dis;
         
         return cell;
-    }
-    return [UITableViewCell new];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

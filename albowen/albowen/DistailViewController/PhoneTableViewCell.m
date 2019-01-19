@@ -25,6 +25,7 @@
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
         UIImageView *rom = [UIImageView new];
+        rom.image = [UIImage imageNamed:@"tel"];
         [self.contentView addSubview:rom];
         [rom mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.equalTo(self.contentView).offset(10);

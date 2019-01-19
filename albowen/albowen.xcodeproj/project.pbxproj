@@ -25,6 +25,11 @@
 		B01D38E821EDDA6A00BC87B8 /* NHFUpLoadImages.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38E421EDDA6A00BC87B8 /* NHFUpLoadImages.m */; };
 		B01D38ED21EDDC0600BC87B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01D38E921EDDBFF00BC87B8 /* Assets.xcassets */; };
 		B01D38F021EF27CD00BC87B8 /* ResourceClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38EF21EF27CD00BC87B8 /* ResourceClass.m */; };
+		B01D38F621F3005E00BC87B8 /* MyColViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38F521F3005E00BC87B8 /* MyColViewController.m */; };
+		B01D38F921F3009300BC87B8 /* MyColView.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38F821F3009300BC87B8 /* MyColView.m */; };
+		B01D390321F3122800BC87B8 /* BindingPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38FE21F3122800BC87B8 /* BindingPhoneViewController.m */; };
+		B01D390421F3122800BC87B8 /* UpdatePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390121F3122800BC87B8 /* UpdatePassViewController.m */; };
+		B01D390521F3122800BC87B8 /* SystemSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390221F3122800BC87B8 /* SystemSettingController.m */; };
 		DA8BB8A521EA135200506854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB8A421EA135200506854 /* AppDelegate.m */; };
 		DA8BB8A821EA135200506854 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB8A721EA135200506854 /* ViewController.m */; };
 		DA8BB8AB21EA135200506854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8BB8A921EA135200506854 /* Main.storyboard */; };
@@ -137,6 +142,16 @@
 		B01D38E921EDDBFF00BC87B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B01D38EE21EF27CD00BC87B8 /* ResourceClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceClass.h; sourceTree = "<group>"; };
 		B01D38EF21EF27CD00BC87B8 /* ResourceClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResourceClass.m; sourceTree = "<group>"; };
+		B01D38F421F3005E00BC87B8 /* MyColViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyColViewController.h; sourceTree = "<group>"; };
+		B01D38F521F3005E00BC87B8 /* MyColViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyColViewController.m; sourceTree = "<group>"; };
+		B01D38F721F3009300BC87B8 /* MyColView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyColView.h; sourceTree = "<group>"; };
+		B01D38F821F3009300BC87B8 /* MyColView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyColView.m; sourceTree = "<group>"; };
+		B01D38FB21F3122800BC87B8 /* SystemSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSettingController.h; sourceTree = "<group>"; };
+		B01D38FD21F3122800BC87B8 /* BindingPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindingPhoneViewController.h; sourceTree = "<group>"; };
+		B01D38FE21F3122800BC87B8 /* BindingPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindingPhoneViewController.m; sourceTree = "<group>"; };
+		B01D390021F3122800BC87B8 /* UpdatePassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePassViewController.h; sourceTree = "<group>"; };
+		B01D390121F3122800BC87B8 /* UpdatePassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePassViewController.m; sourceTree = "<group>"; };
+		B01D390221F3122800BC87B8 /* SystemSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSettingController.m; sourceTree = "<group>"; };
 		BE3A252BBA1B6B13B1723648 /* libPods-albowen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-albowen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8BB8A021EA135200506854 /* albowen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = albowen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8BB8A321EA135200506854 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -423,6 +438,46 @@
 			path = NHFUpLoadAndDownImages;
 			sourceTree = "<group>";
 		};
+		B01D38F121F3001900BC87B8 /* MyColViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B01D38F421F3005E00BC87B8 /* MyColViewController.h */,
+				B01D38F521F3005E00BC87B8 /* MyColViewController.m */,
+				B01D38F721F3009300BC87B8 /* MyColView.h */,
+				B01D38F821F3009300BC87B8 /* MyColView.m */,
+			);
+			path = MyColViewController;
+			sourceTree = "<group>";
+		};
+		B01D38FA21F3122800BC87B8 /* SystemController */ = {
+			isa = PBXGroup;
+			children = (
+				B01D38FB21F3122800BC87B8 /* SystemSettingController.h */,
+				B01D38FC21F3122800BC87B8 /* BindingPhoneViewController */,
+				B01D38FF21F3122800BC87B8 /* UpdatePassViewController */,
+				B01D390221F3122800BC87B8 /* SystemSettingController.m */,
+			);
+			path = SystemController;
+			sourceTree = "<group>";
+		};
+		B01D38FC21F3122800BC87B8 /* BindingPhoneViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B01D38FD21F3122800BC87B8 /* BindingPhoneViewController.h */,
+				B01D38FE21F3122800BC87B8 /* BindingPhoneViewController.m */,
+			);
+			path = BindingPhoneViewController;
+			sourceTree = "<group>";
+		};
+		B01D38FF21F3122800BC87B8 /* UpdatePassViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B01D390021F3122800BC87B8 /* UpdatePassViewController.h */,
+				B01D390121F3122800BC87B8 /* UpdatePassViewController.m */,
+			);
+			path = UpdatePassViewController;
+			sourceTree = "<group>";
+		};
 		DA8BB89721EA135200506854 = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +503,8 @@
 		DA8BB8A221EA135200506854 /* albowen */ = {
 			isa = PBXGroup;
 			children = (
+				B01D38FA21F3122800BC87B8 /* SystemController */,
+				B01D38F121F3001900BC87B8 /* MyColViewController */,
 				DA8BB9AE21F2217700506854 /* MVClassController */,
 				DA8BB95321EF7F7600506854 /* SelectPhotoManager */,
 				B01D38D721EDDA4700BC87B8 /* JsonDeal */,
@@ -595,7 +652,6 @@
 			isa = PBXGroup;
 			children = (
 				DA8BB96721F0C0C000506854 /* SubscribeViewController */,
-				DA8BB96621F0BF7E00506854 /* SuccessViewController */,
 				DA8BB93421EB8BB600506854 /* DistailViewController.h */,
 				DA8BB93521EB8BB600506854 /* DistailViewController.m */,
 				DA8BB95721F0B3CA00506854 /* ScrTableViewCell.h */,
@@ -639,13 +695,6 @@
 				DA8BB95521EF7F7600506854 /* SelectPhotoManager.m */,
 			);
 			path = SelectPhotoManager;
-			sourceTree = "<group>";
-		};
-		DA8BB96621F0BF7E00506854 /* SuccessViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SuccessViewController;
 			sourceTree = "<group>";
 		};
 		DA8BB96721F0C0C000506854 /* SubscribeViewController */ = {
@@ -1008,6 +1057,7 @@
 				DA8BB8F221EA236D00506854 /* BaseView.m in Sources */,
 				DA8BB99B21F0C33800506854 /* NSDate+JKInternetDateTime.m in Sources */,
 				DA8BB98221F0C0C000506854 /* SubscribeViewAlertView.m in Sources */,
+				B01D38F621F3005E00BC87B8 /* MyColViewController.m in Sources */,
 				DA8BB98121F0C0C000506854 /* SubscribeViewModelClass.m in Sources */,
 				DA8BB8A821EA135200506854 /* ViewController.m in Sources */,
 				DA8BB93921EB8BC200506854 /* MjViewController.m in Sources */,
@@ -1021,6 +1071,7 @@
 				B01D38E621EDDA6A00BC87B8 /* HttpHelpBase.m in Sources */,
 				B01D38D221EDD93300BC87B8 /* SearchHotTableViewCell.m in Sources */,
 				DA8BB9A921F2162500506854 /* MapTableViewCell.m in Sources */,
+				B01D390521F3122800BC87B8 /* SystemSettingController.m in Sources */,
 				B01D38D321EDD93300BC87B8 /* SearchHeaderView.m in Sources */,
 				DA8BB91921EB6EFC00506854 /* HomeView.m in Sources */,
 				DA8BB8EF21EA233A00506854 /* BaseViewController.m in Sources */,
@@ -1029,6 +1080,7 @@
 				B01D38CF21EDD93300BC87B8 /* SearchRequest.m in Sources */,
 				B01D38E521EDDA6A00BC87B8 /* HttpHelper.m in Sources */,
 				DA8BB9C221F2217800506854 /* MVClassInterface.m in Sources */,
+				B01D390321F3122800BC87B8 /* BindingPhoneViewController.m in Sources */,
 				DA8BB8E821EA22CA00506854 /* UserInfoClass.m in Sources */,
 				DA8BB98521F0C0C000506854 /* SubscribeViewCellHeaderView.m in Sources */,
 				DA8BB8B321EA135400506854 /* main.m in Sources */,
@@ -1036,6 +1088,7 @@
 				DA8BB95F21F0BCD900506854 /* TimeTableViewCell.m in Sources */,
 				DA8BB95C21F0B3FE00506854 /* NameTableViewCell.m in Sources */,
 				DA8BB92221EB762A00506854 /* MainTableViewCell.m in Sources */,
+				B01D390421F3122800BC87B8 /* UpdatePassViewController.m in Sources */,
 				DA8BB9A021F0C33800506854 /* NSDate+JKCupertinoYankee.m in Sources */,
 				B01D38E821EDDA6A00BC87B8 /* NHFUpLoadImages.m in Sources */,
 				B01D38E721EDDA6A00BC87B8 /* NHFDownImages.m in Sources */,
@@ -1059,6 +1112,7 @@
 				DA8BB95121EF7C4B00506854 /* MineView.m in Sources */,
 				DA8BB9AD21F21A6D00506854 /* BaseNavigationController.m in Sources */,
 				DA8BB8E621EA22CA00506854 /* LoginViewController.m in Sources */,
+				B01D38F921F3009300BC87B8 /* MyColView.m in Sources */,
 				DA8BB95921F0B3CA00506854 /* ScrTableViewCell.m in Sources */,
 				B01D38D521EDD93300BC87B8 /* SearchResultView.m in Sources */,
 				DA8BB98021F0C0C000506854 /* SubscribeViewController.m in Sources */,
