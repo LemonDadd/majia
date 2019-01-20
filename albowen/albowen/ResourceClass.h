@@ -20,8 +20,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSString *ruzhu;
 @property (nonatomic, copy)NSString *lidian;
 @property (nonatomic, copy)NSString *fangjian;
-@property (nonatomic, copy)NSString *dis;
+@property (nonatomic, copy)NSString *jiaotong;
+@property (nonatomic, copy)NSString *fangxing;
+@property (nonatomic, copy)NSString *fangjia;
+@property (nonatomic, copy)NSString *sheshi;
+@property (nonatomic, copy)NSString *tiaokuan;
 @property (nonatomic, assign)BOOL isSc;
+
 
 @end
 
