@@ -13,6 +13,7 @@
 #import "TimeTableViewCell.h"
 #import "PhoneTableViewCell.h"
 #import "MapTableViewCell.h"
+#import <MapKit/MapKit.h>
 
 @interface DistailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -133,6 +134,43 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section ==3) {
+        //服务咨询
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"บริการให้คำปรึกษา" message:@"โทร . 0351-4222173" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"การยกเลิก" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            
+        }];
+        
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"โทร" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://0351-4222173"]];
+        }];
+        
+        // Add the actions.
+        [alertController addAction:cancelAction];
+        [alertController addAction:otherAction];
+        
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    
+    if (indexPath.section ==4) {
+        // 起点
+        MKMapItem *currentLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate: CLLocationCoordinate2DMake([_model.lat floatValue], [_model.lng floatValue]) addressDictionary: nil]];
+        currentLocation.name = @"ตำแหน่งของฉัน";
+             
+        // 目的地的位置
+        CLLocationCoordinate2D coords = CLLocationCoordinate2DMake([_model.lat floatValue], [_model.lng floatValue]);
+        MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark: [[MKPlacemark alloc] initWithCoordinate:coords addressDictionary:nil]];
+        toLocation.name = _model.name;
+        
+        NSArray *items = [NSArray arrayWithObjects:currentLocation, toLocation, nil];
+        NSDictionary *options = @{ MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving, MKLaunchOptionsMapTypeKey: [NSNumber numberWithInteger:MKMapTypeStandard], MKLaunchOptionsShowsTrafficKey: @YES };
+        
+        // 打开苹果地图应用，并呈现指定的item
+        [MKMapItem openMapsWithItems:items launchOptions:options];
+    }
     
 }
 

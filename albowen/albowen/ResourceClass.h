@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSString *fangjia;
 @property (nonatomic, copy)NSString *sheshi;
 @property (nonatomic, copy)NSString *tiaokuan;
+@property (nonatomic, copy)NSString *dis;
 @property (nonatomic, assign)BOOL isSc;
 
 

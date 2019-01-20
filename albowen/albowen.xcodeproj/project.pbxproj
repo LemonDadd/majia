@@ -87,6 +87,7 @@
 		DA8BB9CA21F2225700506854 /* MvClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9C821F2225600506854 /* MvClassModel.m */; };
 		DA8E362321F46F4D00652B93 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E362121F46F4D00652B93 /* AboutViewController.m */; };
 		DA8E362821F472D500652B93 /* LoginInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E362621F472D500652B93 /* LoginInterface.m */; };
+		DA8E362D21F4D14000652B93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8E362C21F4D14000652B93 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,6 +272,7 @@
 		DA8E362421F472BB00652B93 /* UrlSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlSetting.h; sourceTree = "<group>"; };
 		DA8E362621F472D500652B93 /* LoginInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInterface.m; sourceTree = "<group>"; };
 		DA8E362721F472D500652B93 /* LoginInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInterface.h; sourceTree = "<group>"; };
+		DA8E362C21F4D14000652B93 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8E362D21F4D14000652B93 /* MapKit.framework in Frameworks */,
 				A19F9387C1F2A0649F3D166F /* libPods-albowen.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +314,7 @@
 		7F9497D3FE9599255B64BE25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA8E362C21F4D14000652B93 /* MapKit.framework */,
 				BE3A252BBA1B6B13B1723648 /* libPods-albowen.a */,
 			);
 			name = Frameworks;
