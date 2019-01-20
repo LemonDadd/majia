@@ -74,7 +74,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self setlayer];
         [self setPercentByValue:v Animated:YES];
-        weakSelf.fen.text = [NSString stringWithFormat:@"评分\n%@",model.fenshu];
+        weakSelf.fen.text = [NSString stringWithFormat:@"คะแนน\n%@",model.fenshu];
     });
 }
 

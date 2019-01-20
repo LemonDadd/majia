@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SearchResultViewController : BaseViewController
 
-@property (nonatomic, copy)NSString *title;
+@property (nonatomic, strong)ResourceClass *model;
 
 @end
 

@@ -57,7 +57,6 @@
     //搜索历史列表
     [SearchRequest requestMvUserSearchLogRequest:^(NSArray * _Nonnull message, NSString * _Nonnull errorMsg) {
         if (message) {
-            weakSelf.historyView.histroyResource = message;
         }
     }];
     

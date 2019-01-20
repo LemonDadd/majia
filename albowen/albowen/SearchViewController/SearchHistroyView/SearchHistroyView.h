@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SearchHistroyView : BaseView
 
 @property (nonatomic, strong)NSArray *hotResource;
-@property (nonatomic, strong)NSArray *histroyResource;
+@property (nonatomic, strong)NSMutableArray *histroyResource;
 
 @end
 

@@ -25,12 +25,12 @@
 - (void)startSelectPhotoWithImageName:(NSString *)imageName
                                sender:(id)sender{
     _imageName = imageName;
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"修改我的头像" message:nil preferredStyle: UIAlertControllerStyleActionSheet];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-    [alertController addAction: [UIAlertAction actionWithTitle: @"拍照" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"เปลี่ยน avatar ของฉัน" message:nil preferredStyle: UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"การยกเลิก" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction: [UIAlertAction actionWithTitle: @"ถ่ายรูป" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self selectPhotoWithType:0];
     }]];
-    [alertController addAction: [UIAlertAction actionWithTitle: @"从相册获取" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [alertController addAction: [UIAlertAction actionWithTitle: @"จากอัลบั้มที่ได้รับ" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self selectPhotoWithType:1];
     }]];
     [alertController addAction:cancelAction];

@@ -25,7 +25,7 @@
     if (self) {
         UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         leftBtn.tag = 0+viewTag;
-        [leftBtn setTitle:@"精选" forState:UIControlStateNormal];
+        [leftBtn setTitle:@"การเลือก" forState:UIControlStateNormal];
         [leftBtn addTarget:self action:@selector(titleEvient:) forControlEvents:UIControlEventTouchUpInside];
         [leftBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self addSubview:leftBtn];
@@ -36,7 +36,7 @@
         
         UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         rightBtn.tag = 1+viewTag;
-        [rightBtn setTitle:@"推荐" forState:UIControlStateNormal];
+        [rightBtn setTitle:@"แนะนำ" forState:UIControlStateNormal];
         [rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [rightBtn addTarget:self action:@selector(titleEvient:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:rightBtn];

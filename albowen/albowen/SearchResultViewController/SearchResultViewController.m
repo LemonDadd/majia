@@ -9,7 +9,7 @@
 #import "SearchResultViewController.h"
 #import "SearchResultTableViewCell.h"
 #import "SearchRequest.h"
-
+#import "DistailViewController.h"
 
 @interface SearchResultViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -24,26 +24,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"mv_serch_right"] style:UIBarButtonItemStylePlain target:self action:@selector(right)];
-    
-    self.title = @"搜索结果";
+    self.title = @"ค้นหา";
     
     [self.view addSubview:self.tab];
     [self.tab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
     
-  
+    if (self.model) {
+        self.allResource = [NSArray arrayWithObject:self.model];
+    }
     
-    KWeakSelf;
-    [SearchRequest requestFindMvTitle:self.title Request:^(NSArray * _Nonnull message, NSString * _Nonnull errorMsg) {
-        weakSelf.allResource = message;
-        [weakSelf.tab  reloadData];
-    }];
-    
-}
-
-- (void)right {
+//    KWeakSelf;
+//    [SearchRequest requestFindMvTitle:@"" Request:^(NSArray * _Nonnull message, NSString * _Nonnull errorMsg) {
+//        weakSelf.allResource = message;
+//        [weakSelf.tab  reloadData];
+//    }];
     
 }
 
@@ -60,6 +56,11 @@
     if (cell == nil) {
         cell = [[SearchResultTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SearchResultTableViewCell"];
     }
+    ResourceClass *model = _allResource[indexPath.row];
+    [cell.leftImageView sd_setImageWithURL:[NSURL URLWithString:model.imageList[0]] placeholderImage:Def];
+    cell.nameLabel.text = model.name;
+    cell.detailLabel.text = model.dis;
+    cell.countLabel.text = model.fangjian;
     return cell;
 }
 
@@ -68,6 +69,13 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return CGFLOAT_MIN;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DistailViewController *vc = [DistailViewController new];
+    vc.model = self.model;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(UITableView *)tab {

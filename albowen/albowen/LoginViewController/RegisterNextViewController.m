@@ -53,7 +53,7 @@
     
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [loginBtn addTarget:self action:@selector(registerBtnEvent) forControlEvents:UIControlEventTouchUpInside];
-    [loginBtn setTitle:@"注册" forState:UIControlStateNormal];
+    [loginBtn setTitle:@"การลงทะเบียน" forState:UIControlStateNormal];
     [loginBtn setBackgroundImage:[UIImage imageNamed:@"Register_btn_ico"] forState:UIControlStateNormal];
     loginBtn.titleLabel.font = KFONT(15);
     [self.view addSubview:loginBtn];
@@ -67,16 +67,16 @@
 - (void)registerBtnEvent {
     //密码登录
     if (self.inputView.topTextField.text.length == 0) {
-        [CustomView alertMessage:@"请输入密码" view:self.view];
+        [CustomView alertMessage:@"กรุณาป้อนรหัสผ่าน" view:self.view];
         return;
     }
     if (self.inputView.bottomTextField.text.length == 0) {
-        [CustomView alertMessage:@"请再次输入密码" view:self.view];
+        [CustomView alertMessage:@"กรุณาป้อนรหัสผ่าน" view:self.view];
         return;
     }
     
     if ([self.inputView.bottomTextField.text isEqualToString:self.inputView.topTextField.text]) {
-        [CustomView alertMessage:@"两次密码输入不一致,请重新输入" view:self.view];
+        [CustomView alertMessage:@"สองครั้งรหัสผ่านไม่ตรงกันกรุณาป้อนใหม่อีกครั้ง" view:self.view];
         return;
     }
 }

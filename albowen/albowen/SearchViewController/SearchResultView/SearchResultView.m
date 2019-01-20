@@ -54,7 +54,7 @@
             cell.backgroundColor = KCOLOR(245, 245, 245);
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
-        cell.textLabel.text =[NSString stringWithFormat:@"搜索\"%@\"",_title];
+        cell.textLabel.text =[NSString stringWithFormat:@"ค้นหา\"%@\"",_title];
         cell.textLabel.font = KFONT(12);
         cell.textLabel.textColor = [UIColor redColor];
         return cell;
@@ -85,7 +85,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
         SearchResultViewController *vc = [SearchResultViewController new];
-        vc.title = _title;
         [self.viewController.navigationController pushViewController:vc animated:YES];
     } else {
         

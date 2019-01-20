@@ -12,6 +12,10 @@
 #import "MineViewTopTabViewCell.h"
 #import "SelectPhotoManager.h"
 #import "BaseViewController.h"
+#import "MyColViewController.h"
+#import "SystemSettingController.h"
+#import "AboutViewController.h"
+
 
 @interface MineView()
 
@@ -36,7 +40,7 @@
             make.edges.equalTo(self);
         }];
         _imageArray = @[@[@"my_yuyue_icon",@"my_love_icon"],@[@"my_set_icon",@"my_delete_icon"],@[@"my_about_icon",@"my_phone_icon"]];
-        _titleArray =@[@[@"我的预约",@"我的收藏"],@[@"系统设置",@"清除缓存"],@[@"关于我们",@"服务咨询"]];
+        _titleArray =@[@[@"จองของฉัน",@"คอลเลกชันของฉัน"],@[@"การตั้งค่าระบบ",@"ล้างแคช"],@[@"เกี่ยวกับเรื่องที่เรา",@"บริการให้คำปรึกษา"]];
     }
     return self;
 }
@@ -73,9 +77,14 @@
         [cell.headerImageView addGestureRecognizer:gr];
         if ([UserInfoClass getUserInfoClass] == nil) {
             cell.headerImageView.image = [UIImage imageNamed:@"morentupian"];
-            cell.nameLabel.text = @"请点击登录";
+            cell.nameLabel.text = @"กรุณาคลิกที่เข้าสู่ระบบ";
         } else {
-            [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[UserInfoClass getUserInfoClass].headimg]] placeholderImage:Def];
+            
+            if ([UserInfoClass getUserInfoClass].image) {
+                cell.headerImageView.image =[UserInfoClass getUserInfoClass].image;
+            } else {
+                [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[UserInfoClass getUserInfoClass].headimg]] placeholderImage:Def];
+            }
             cell.nameLabel.text =[UserInfoClass getUserInfoClass].nickname;
         }
         return cell;
@@ -119,13 +128,13 @@
     
     if (indexPath.section == 2 && indexPath.row == 1) {
         //清除缓存
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:[NSString stringWithFormat:@"缓存大小为%@,确定要清理缓存吗？",[self getCache]] preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:[NSString stringWithFormat:@"ขนาดของแคชสำหรับ%@,แน่ใจว่าต้องการล้างแคช ?",[self getCache]] preferredStyle:UIAlertControllerStyleAlert];
         
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"การยกเลิก" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             
         }];
         
-        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"แน่ใจว่า" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             [[SDImageCache sharedImageCache]clearMemory];
             [[SDImageCache sharedImageCache] clearDiskOnCompletion:nil];
         }];
@@ -134,7 +143,6 @@
         [alertController addAction:cancelAction];
         [alertController addAction:otherAction];
         
-        
         [self.viewController presentViewController:alertController animated:YES completion:nil];
 
         return;
@@ -142,8 +150,8 @@
     
     if (indexPath.section ==3 && indexPath.row ==0) {
         //关于我们
-//        AboutViewController *vc = [AboutViewController new];
-//        [self.viewController.navigationController pushViewController:vc animated:YES];
+        AboutViewController *vc = [AboutViewController new];
+        [self.viewController.navigationController pushViewController:vc animated:YES];
         return;
     }
     
@@ -155,37 +163,33 @@
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             //我的预约
-//            AppointmentViewController *vc = [AppointmentViewController new];
-//            [self.viewController.navigationController pushViewController:vc animated:YES];
+            MyColViewController *vc = [MyColViewController new];
+            [self.viewController.navigationController pushViewController:vc animated:YES];
         }
         
         if (indexPath.row == 1) {
             //我的收藏
-//            MyFavoriteController *vc =[MyFavoriteController new];
-//            [self.viewController.navigationController pushViewController:vc animated:YES];
-        }
-        if (indexPath.row == 2) {
-//            MyActivityViewController *vc = [MyActivityViewController new];
-//            [self.viewController.navigationController pushViewController:vc animated:YES];
+            MyColViewController *vc =[MyColViewController new];
+            [self.viewController.navigationController pushViewController:vc animated:YES];
         }
     }
     if (indexPath.section == 2) {
         if (indexPath.row ==0) {
             //系统设置
-//            SystemSettingController *vc =[SystemSettingController new];
-//            [self.viewController.navigationController pushViewController:vc animated:YES];
+            SystemSettingController *vc =[SystemSettingController new];
+            [self.viewController.navigationController pushViewController:vc animated:YES];
         }
     }
     if (indexPath.section == 3) {
         if (indexPath.row == 1) {
             //服务咨询
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"服务咨询" message:@"拨打电话 0351-4222173" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"บริการให้คำปรึกษา" message:@"โทร . 0351-4222173" preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"การยกเลิก" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
                 
             }];
             
-            UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"呼叫" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"โทร" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://0351-4222173"]];
             }];
             
@@ -208,7 +212,7 @@
     if (!_photoManager) {
         _photoManager =[[SelectPhotoManager alloc]init];
     }
-    [_photoManager startSelectPhotoWithImageName:@"选择头像" sender:gr.view];
+    [_photoManager startSelectPhotoWithImageName:@"เลือกไอคอน" sender:gr.view];
     KWeakSelf;
     //选取照片成功
     _photoManager.successHandle=^(SelectPhotoManager *manager,UIImage *image){

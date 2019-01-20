@@ -26,7 +26,6 @@
 		B01D38ED21EDDC0600BC87B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01D38E921EDDBFF00BC87B8 /* Assets.xcassets */; };
 		B01D38F021EF27CD00BC87B8 /* ResourceClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38EF21EF27CD00BC87B8 /* ResourceClass.m */; };
 		B01D38F621F3005E00BC87B8 /* MyColViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38F521F3005E00BC87B8 /* MyColViewController.m */; };
-		B01D38F921F3009300BC87B8 /* MyColView.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38F821F3009300BC87B8 /* MyColView.m */; };
 		B01D390321F3122800BC87B8 /* BindingPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38FE21F3122800BC87B8 /* BindingPhoneViewController.m */; };
 		B01D390421F3122800BC87B8 /* UpdatePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390121F3122800BC87B8 /* UpdatePassViewController.m */; };
 		B01D390521F3122800BC87B8 /* SystemSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390221F3122800BC87B8 /* SystemSettingController.m */; };
@@ -51,7 +50,6 @@
 		DA8BB92221EB762A00506854 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB92121EB762900506854 /* MainTableViewCell.m */; };
 		DA8BB92A21EB887500506854 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB92921EB887500506854 /* HomeTableViewCell.m */; };
 		DA8BB92D21EB8B5500506854 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB92C21EB8B5500506854 /* BaseTabBarController.m */; };
-		DA8BB93021EB8B9C00506854 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB92F21EB8B9C00506854 /* ListViewController.m */; };
 		DA8BB93321EB8BAA00506854 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB93221EB8BAA00506854 /* UserViewController.m */; };
 		DA8BB93621EB8BB600506854 /* DistailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB93521EB8BB600506854 /* DistailViewController.m */; };
 		DA8BB93921EB8BC200506854 /* MjViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB93821EB8BC200506854 /* MjViewController.m */; };
@@ -87,6 +85,8 @@
 		DA8BB9C621F2217800506854 /* MVTieleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9BD21F2217800506854 /* MVTieleView.m */; };
 		DA8BB9C721F2217800506854 /* MVCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9C021F2217800506854 /* MVCollectionViewCell.m */; };
 		DA8BB9CA21F2225700506854 /* MvClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB9C821F2225600506854 /* MvClassModel.m */; };
+		DA8E362321F46F4D00652B93 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E362121F46F4D00652B93 /* AboutViewController.m */; };
+		DA8E362821F472D500652B93 /* LoginInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E362621F472D500652B93 /* LoginInterface.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,8 +144,6 @@
 		B01D38EF21EF27CD00BC87B8 /* ResourceClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResourceClass.m; sourceTree = "<group>"; };
 		B01D38F421F3005E00BC87B8 /* MyColViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyColViewController.h; sourceTree = "<group>"; };
 		B01D38F521F3005E00BC87B8 /* MyColViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyColViewController.m; sourceTree = "<group>"; };
-		B01D38F721F3009300BC87B8 /* MyColView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyColView.h; sourceTree = "<group>"; };
-		B01D38F821F3009300BC87B8 /* MyColView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyColView.m; sourceTree = "<group>"; };
 		B01D38FB21F3122800BC87B8 /* SystemSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSettingController.h; sourceTree = "<group>"; };
 		B01D38FD21F3122800BC87B8 /* BindingPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindingPhoneViewController.h; sourceTree = "<group>"; };
 		B01D38FE21F3122800BC87B8 /* BindingPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindingPhoneViewController.m; sourceTree = "<group>"; };
@@ -198,8 +196,6 @@
 		DA8BB92921EB887500506854 /* HomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		DA8BB92B21EB8B5500506854 /* BaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		DA8BB92C21EB8B5500506854 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
-		DA8BB92E21EB8B9C00506854 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		DA8BB92F21EB8B9C00506854 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		DA8BB93121EB8BAA00506854 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		DA8BB93221EB8BAA00506854 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		DA8BB93421EB8BB600506854 /* DistailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistailViewController.h; sourceTree = "<group>"; };
@@ -270,6 +266,11 @@
 		DA8BB9C121F2217800506854 /* MVTieleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVTieleView.h; sourceTree = "<group>"; };
 		DA8BB9C821F2225600506854 /* MvClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MvClassModel.m; sourceTree = "<group>"; };
 		DA8BB9C921F2225700506854 /* MvClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MvClassModel.h; sourceTree = "<group>"; };
+		DA8E362121F46F4D00652B93 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		DA8E362221F46F4D00652B93 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		DA8E362421F472BB00652B93 /* UrlSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlSetting.h; sourceTree = "<group>"; };
+		DA8E362621F472D500652B93 /* LoginInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInterface.m; sourceTree = "<group>"; };
+		DA8E362721F472D500652B93 /* LoginInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInterface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,7 +321,6 @@
 			children = (
 				B01D389321EDD7D500BC87B8 /* SearchResultViewController.m */,
 				B01D389421EDD7D500BC87B8 /* cell */,
-				B01D389721EDD7D500BC87B8 /* Model */,
 				B01D389821EDD7D500BC87B8 /* SearchResultViewController.h */,
 			);
 			path = SearchResultViewController;
@@ -333,13 +333,6 @@
 				B01D389621EDD7D500BC87B8 /* SearchResultTableViewCell.m */,
 			);
 			path = cell;
-			sourceTree = "<group>";
-		};
-		B01D389721EDD7D500BC87B8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B01D38B921EDD93300BC87B8 /* SearchViewController */ = {
@@ -367,9 +360,9 @@
 		B01D38BE21EDD93300BC87B8 /* SearchHistroyView */ = {
 			isa = PBXGroup;
 			children = (
+				B01D38C721EDD93300BC87B8 /* SearchHistroyView.h */,
 				B01D38BF21EDD93300BC87B8 /* SearchHistroyView.m */,
 				B01D38C021EDD93300BC87B8 /* Cell */,
-				B01D38C721EDD93300BC87B8 /* SearchHistroyView.h */,
 			);
 			path = SearchHistroyView;
 			sourceTree = "<group>";
@@ -443,8 +436,6 @@
 			children = (
 				B01D38F421F3005E00BC87B8 /* MyColViewController.h */,
 				B01D38F521F3005E00BC87B8 /* MyColViewController.m */,
-				B01D38F721F3009300BC87B8 /* MyColView.h */,
-				B01D38F821F3009300BC87B8 /* MyColView.m */,
 			);
 			path = MyColViewController;
 			sourceTree = "<group>";
@@ -503,6 +494,7 @@
 		DA8BB8A221EA135200506854 /* albowen */ = {
 			isa = PBXGroup;
 			children = (
+				DA8E362021F46F4D00652B93 /* AboutViewController */,
 				B01D38FA21F3122800BC87B8 /* SystemController */,
 				B01D38F121F3001900BC87B8 /* MyColViewController */,
 				DA8BB9AE21F2217700506854 /* MVClassController */,
@@ -513,7 +505,6 @@
 				DA8BB92621EB870C00506854 /* MjViewController */,
 				DA8BB90B21EB607A00506854 /* DistailViewController */,
 				DA8BB90A21EB607700506854 /* UserViewController */,
-				DA8BB90921EB607400506854 /* ListViewController */,
 				DA8BB90821EB607200506854 /* HomeViewController */,
 				DA8BB8F321EA246000506854 /* CustomView */,
 				DA8BB8D521EA22CA00506854 /* LoginViewController */,
@@ -527,6 +518,7 @@
 				DA8BB8F121EA236C00506854 /* BaseView.m */,
 				DA8BB92B21EB8B5500506854 /* BaseTabBarController.h */,
 				DA8BB92C21EB8B5500506854 /* BaseTabBarController.m */,
+				DA8E362421F472BB00652B93 /* UrlSetting.h */,
 				DA8BB9AA21F21A6C00506854 /* BaseNavViewController */,
 				B01D38E921EDDBFF00BC87B8 /* Assets.xcassets */,
 				DA8BB8A921EA135200506854 /* Main.storyboard */,
@@ -569,18 +561,11 @@
 				DA8BB8DA21EA22CA00506854 /* RegisterViewController.m */,
 				DA8BB8EC21EA22F700506854 /* RegisterNextViewController.h */,
 				DA8BB8E321EA22CA00506854 /* RegisterNextViewController.m */,
-				DA8BB8D621EA22CA00506854 /* Interface */,
+				DA8E362521F472D500652B93 /* Interface */,
 				DA8BB8DC21EA22CA00506854 /* Model */,
 				DA8BB8E021EA22CA00506854 /* Views */,
 			);
 			path = LoginViewController;
-			sourceTree = "<group>";
-		};
-		DA8BB8D621EA22CA00506854 /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interface;
 			sourceTree = "<group>";
 		};
 		DA8BB8DC21EA22CA00506854 /* Model */ = {
@@ -595,8 +580,8 @@
 		DA8BB8E021EA22CA00506854 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DA8BB8E121EA22CA00506854 /* LoginInputView.m */,
 				DA8BB8E221EA22CA00506854 /* LoginInputView.h */,
+				DA8BB8E121EA22CA00506854 /* LoginInputView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -625,15 +610,6 @@
 				DA8BB91821EB6EFC00506854 /* HomeView.m */,
 			);
 			path = HomeViewController;
-			sourceTree = "<group>";
-		};
-		DA8BB90921EB607400506854 /* ListViewController */ = {
-			isa = PBXGroup;
-			children = (
-				DA8BB92E21EB8B9C00506854 /* ListViewController.h */,
-				DA8BB92F21EB8B9C00506854 /* ListViewController.m */,
-			);
-			path = ListViewController;
 			sourceTree = "<group>";
 		};
 		DA8BB90A21EB607700506854 /* UserViewController */ = {
@@ -875,6 +851,24 @@
 			path = MVCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		DA8E362021F46F4D00652B93 /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA8E362121F46F4D00652B93 /* AboutViewController.m */,
+				DA8E362221F46F4D00652B93 /* AboutViewController.h */,
+			);
+			path = AboutViewController;
+			sourceTree = "<group>";
+		};
+		DA8E362521F472D500652B93 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				DA8E362721F472D500652B93 /* LoginInterface.h */,
+				DA8E362621F472D500652B93 /* LoginInterface.m */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1011,14 +1005,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-albowen/Pods-albowen-resources.sh",
 				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
-				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/mapapi.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
@@ -1061,7 +1053,6 @@
 				DA8BB98121F0C0C000506854 /* SubscribeViewModelClass.m in Sources */,
 				DA8BB8A821EA135200506854 /* ViewController.m in Sources */,
 				DA8BB93921EB8BC200506854 /* MjViewController.m in Sources */,
-				DA8BB93021EB8B9C00506854 /* ListViewController.m in Sources */,
 				DA8BB9CA21F2225700506854 /* MvClassModel.m in Sources */,
 				B01D38D421EDD93300BC87B8 /* SearchHistroyTableViewCell.m in Sources */,
 				DA8BB8F921EA246000506854 /* CustomView.m in Sources */,
@@ -1077,6 +1068,7 @@
 				DA8BB8EF21EA233A00506854 /* BaseViewController.m in Sources */,
 				DA8BB8E721EA22CA00506854 /* RegisterViewController.m in Sources */,
 				DA8BB9C621F2217800506854 /* MVTieleView.m in Sources */,
+				DA8E362821F472D500652B93 /* LoginInterface.m in Sources */,
 				B01D38CF21EDD93300BC87B8 /* SearchRequest.m in Sources */,
 				B01D38E521EDDA6A00BC87B8 /* HttpHelper.m in Sources */,
 				DA8BB9C221F2217800506854 /* MVClassInterface.m in Sources */,
@@ -1088,6 +1080,7 @@
 				DA8BB95F21F0BCD900506854 /* TimeTableViewCell.m in Sources */,
 				DA8BB95C21F0B3FE00506854 /* NameTableViewCell.m in Sources */,
 				DA8BB92221EB762A00506854 /* MainTableViewCell.m in Sources */,
+				DA8E362321F46F4D00652B93 /* AboutViewController.m in Sources */,
 				B01D390421F3122800BC87B8 /* UpdatePassViewController.m in Sources */,
 				DA8BB9A021F0C33800506854 /* NSDate+JKCupertinoYankee.m in Sources */,
 				B01D38E821EDDA6A00BC87B8 /* NHFUpLoadImages.m in Sources */,
@@ -1112,7 +1105,6 @@
 				DA8BB95121EF7C4B00506854 /* MineView.m in Sources */,
 				DA8BB9AD21F21A6D00506854 /* BaseNavigationController.m in Sources */,
 				DA8BB8E621EA22CA00506854 /* LoginViewController.m in Sources */,
-				B01D38F921F3009300BC87B8 /* MyColView.m in Sources */,
 				DA8BB95921F0B3CA00506854 /* ScrTableViewCell.m in Sources */,
 				B01D38D521EDD93300BC87B8 /* SearchResultView.m in Sources */,
 				DA8BB98021F0C0C000506854 /* SubscribeViewController.m in Sources */,
@@ -1298,7 +1290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4C4BBJ8J25;
+				DEVELOPMENT_TEAM = 52HKCP4F62;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/albowen/PrefixHeader.pch";
 				INFOPLIST_FILE = albowen/Info.plist;
@@ -1307,7 +1299,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fx.albowen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xuannalisha.albowen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1319,7 +1311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4C4BBJ8J25;
+				DEVELOPMENT_TEAM = 52HKCP4F62;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/albowen/PrefixHeader.pch";
 				INFOPLIST_FILE = albowen/Info.plist;
@@ -1328,7 +1320,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fx.albowen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xuannalisha.albowen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

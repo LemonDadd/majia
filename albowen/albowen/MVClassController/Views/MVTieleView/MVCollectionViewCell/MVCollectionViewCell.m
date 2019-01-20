@@ -65,7 +65,6 @@
         
         _titleLabel = [UILabel new];
         _titleLabel.textColor = [UIColor whiteColor];
-        _titleLabel.text = @"我心永恒";
         _titleLabel.font = [UIFont systemFontOfSize:15];
         _titleLabel.numberOfLines = 0;
         [self.contentView addSubview:_titleLabel];

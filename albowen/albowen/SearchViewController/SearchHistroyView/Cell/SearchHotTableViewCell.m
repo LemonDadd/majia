@@ -70,9 +70,11 @@
         [labelButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         //根据文字计算标签的宽度，后面会多加上一点宽度，视情况而定
         NSDictionary * attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:15]};
-        CGFloat labelWidth = [allRessour[i] boundingRectWithSize:CGSizeMake(FLT_MAX, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size.width + 40;
+         ResourceClass*model =[ResourceClass mj_objectWithKeyValues:allRessour[i]];
+        CGFloat labelWidth = [model.name boundingRectWithSize:CGSizeMake(FLT_MAX, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size.width + 40;
         //为标签赋值
-        [labelButton setTitle:[NSString stringWithFormat:@"%@",allRessour[i]] forState:UIControlStateNormal];
+       
+        [labelButton setTitle:[NSString stringWithFormat:@"%@",model.name] forState:UIControlStateNormal];
         //设置标签的frame
         labelButton.frame = CGRectMake(labelMinX, labelMimY, labelWidth, labelHeight);
         labelButton.layer.masksToBounds = YES;
@@ -111,9 +113,9 @@
 
 - (void)labelButtonAction:(UIButton *)btn
 {
-    NSString *title = _allResource[btn.tag-100];
+    ResourceClass*model =[ResourceClass mj_objectWithKeyValues:_allResource[btn.tag-100]];
     if (_hotTipDidSeletd) {
-        _hotTipDidSeletd(title);
+        _hotTipDidSeletd(model);
     }
 }
 

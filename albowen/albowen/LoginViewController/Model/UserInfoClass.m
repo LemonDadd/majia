@@ -55,6 +55,18 @@
     }
 }
 
++ (void)saveUserHeadImage:(UIImage*)image {
+    @synchronized (self) {
+        NSMutableDictionary* userInfoDic = [[NSMutableDictionary alloc] initWithDictionary:[[CacheDeal getInstancetype] getObject:UserInfoKey]];
+        [userInfoDic removeObjectForKey:@"image"];
+        
+        [userInfoDic setObject:image forKey:@"image"];
+        [[CacheDeal getInstancetype] removeDataKey:UserInfoKey];
+        [[CacheDeal getInstancetype] saveObject:userInfoDic key:UserInfoKey];
+        staticUserInfoClass = [UserInfoClass mj_objectWithKeyValues:userInfoDic];
+    }
+}
+
 
 
 + (UserInfoClass *)setValue:(id)value forKey:(NSString *)key {

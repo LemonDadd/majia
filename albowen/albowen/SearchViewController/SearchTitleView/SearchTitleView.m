@@ -32,7 +32,7 @@
         
         
         UITextField *textField = [UITextField new];
-        textField.placeholder = @"搜索MV";
+        textField.placeholder = @"ค้นหา";
         textField.delegate =self;
         textField.returnKeyType = UIReturnKeyDone;
         textField.font = KFONT(15);

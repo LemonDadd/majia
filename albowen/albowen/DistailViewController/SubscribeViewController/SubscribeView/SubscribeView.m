@@ -13,12 +13,12 @@
 #import "SubscribeViewCellFooterView.h"
 #import "SubscribeViewAlertView.h"
 #import "BaseViewController.h"
+#import "JhlvShowAlertController.h"
 
 @implementation SubscribeView
 {
     NSString *dateStr;
     NSInteger dateIndx;
-    NSString *timeStr;
 }
 - (instancetype)init
 {
@@ -52,7 +52,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 2;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -70,23 +70,12 @@
         if (cell == nil) {
             cell = [[SubscribeViewBottomCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SubscribeViewBottomCell"];
         }
-        if (indexPath.row ==1) {
-            cell.titleLabel.text = @"参观日期";
-            if (dateStr) {
-                cell.contentLabel.text = dateStr;
-            }else {
-                cell.contentLabel.text = @"请选择参观日期";
-            }
-            
-        } else {
-            cell.titleLabel.text = @"参观时间";
-            if (timeStr) {
-                cell.contentLabel.text = timeStr;
-            }else {
-                cell.contentLabel.text = @"请选择参观时间";
-            }
+        cell.titleLabel.text = @"วันที่";
+        if (dateStr) {
+            cell.contentLabel.text = dateStr;
+        }else {
+            cell.contentLabel.text = @"วันที่";
         }
-        
         return cell;
     }
    
@@ -122,12 +111,6 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (indexPath.row == 1) {
         [self showDayAlert:cell];
-    }else if(indexPath.row ==2){
-        if (dateIndx == -1) {
-            [CustomView alertMessage:@"请先选择参观日期" view:self];
-            return;
-        }
-        [self showTimeAlert:cell];
     }
 }
 
@@ -139,17 +122,9 @@
     }
     
     if (dateStr.length == 0) {
-        [CustomView alertMessage:@"请选择参观日期" view:self];
+        [CustomView alertMessage:@"วันที่" view:self];
         return;
     }
-    
-    if (timeStr.length == 0) {
-        [CustomView alertMessage:@"请选择参观时间" view:self];
-        return;
-    }
-    
-    
-    
     SubscribeViewAlertView *alert = [SubscribeViewAlertView new];
     [[CustomView getInstancetype]windowAlertBy:alert isTouchClose:NO color:nil animated:YES addDelegate:nil];
     [alert mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -170,49 +145,23 @@
 
 
 - (void)requestResvervationAdd {
-    [[CustomView getInstancetype]showWaitView:@"请稍后..." byView:self];
     [self.modelClass requestResvervationAddByrequest:^(NSString *errorMsg) {
-        [[CustomView getInstancetype]closeHUD];
         if (errorMsg == nil) {
-            [CustomView alertMessage:@"预约成功" view:self];
+            [CustomView alertMessage:@"ความสำเร็จใน" view:self];
         } else {
              [CustomView alertMessage:errorMsg view:self];
         }
     }];
 }
 
-- (void)showTimeAlert:(UITableViewCell *)cell {
-    NSMutableArray *timeArray =[NSMutableArray array];
-    
-//    ResvDateModel *data =_model.dateList[dateIndx];
-//    for (ResvTimeModel *obj in data.timeList) {
-//        NSString *str = [NSString stringWithFormat:@"%@-%@(可预约%ld人)",obj.beginTime,obj.endTime,(long)obj.bookableNum];
-//        [timeArray addObject:str];
-//    }
-//    [JhlvShowAlertController shareInstance].sender =cell;
-//    [[JhlvShowAlertController shareInstance]showSheet:@"选择时间" message:nil cancelTitle:nil titleArray:timeArray viewController:[self viewController] confirm:^(NSInteger buttonTag) {
-//        timeStr = timeArray[buttonTag];
-//        _modelClass.timeModel =data.timeList[buttonTag];
-//        [_mainTabView reloadData];
-//    }];
-}
-
 - (void)showDayAlert:(UITableViewCell *)cell {
-//    NSMutableArray *dateArray =[NSMutableArray array];
-//    for (ResvDateModel *obj in _model.dateList) {
-//        NSString *str = [NSString stringWithFormat:@"%@ %@",obj.date,obj.week];
-//        [dateArray addObject:str];
-//    }
-//    [JhlvShowAlertController shareInstance].sender =cell;
-//    [[JhlvShowAlertController shareInstance]showSheet:@"选择日期" message:nil cancelTitle:nil titleArray:dateArray viewController:[self viewController] confirm:^(NSInteger buttonTag) {
-//        if (dateIndx != buttonTag) {
-//            timeStr = nil;
-//        }
-//        dateStr = dateArray[buttonTag];
-//        dateIndx = buttonTag;
-//        _modelClass.dateModel =_model.dateList[buttonTag];
-//        [_mainTabView reloadData];
-//    }];
+    NSMutableArray *dateArray =[NSMutableArray arrayWithArray:[self getOneWeek]];
+    [JhlvShowAlertController shareInstance].sender =cell;
+    [[JhlvShowAlertController shareInstance]showSheet:@"วันที่" message:nil cancelTitle:nil titleArray:dateArray viewController:[self viewController] confirm:^(NSInteger buttonTag) {
+        self->dateStr = dateArray[buttonTag];
+        self->dateIndx = buttonTag;
+        [self->_mainTabView reloadData];
+    }];
 }
 
 - (NSArray *)getOneWeek {

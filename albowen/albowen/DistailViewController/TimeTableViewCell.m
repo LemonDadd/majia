@@ -82,9 +82,9 @@
 }
 -(void)setModel:(ResourceClass *)model {
     _model = model;
-    _ruzhu.text = [NSString stringWithFormat:@"入住时间:%@",model.ruzhu];
-    _lidian.text = [NSString stringWithFormat:@"离店时间:%@",model.lidian];
-    _fangjian.text =[NSString stringWithFormat:@"%@房间",model.fangjian];
+    _ruzhu.text = [NSString stringWithFormat:@"เวลาเช็คอิน:%@",model.ruzhu];
+    _lidian.text = [NSString stringWithFormat:@"ออกจากเวลา:%@",model.lidian];
+    _fangjian.text =[NSString stringWithFormat:@"%@ห้อง",model.fangjian];
 }
 
 - (void)awakeFromNib {

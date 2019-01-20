@@ -22,7 +22,7 @@
         UILabel *label = [UILabel new];
         label.font = [UIFont fontByName:@"" fontSize:20];
         label.textColor = [UIColor whiteColor];
-        label.text = @"请填写预约人信息";
+        label.text = @"ข้อมูลการจอง";
         [self addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);
@@ -30,7 +30,7 @@
         }];
         
         _nameField =[UITextField new];
-        _nameField.placeholder = @"请输入姓名";
+        _nameField.placeholder = @"ชื่อ";
          [_nameField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
         _nameField.font =[UIFont fontByName:@"" fontSize:16];
         _nameField.textColor = [UIColor whiteColor];
@@ -53,7 +53,7 @@
         
         _idField =[UITextField new];
         _idField.delegate =self;
-        _idField.placeholder = @"请输入身份证号码";
+        _idField.placeholder = @"บัตรประชาชน";
         [_idField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
         _idField.font =[UIFont fontByName:@"" fontSize:16];
         _idField.textColor = [UIColor whiteColor];
@@ -73,7 +73,7 @@
         
         _phoneField =[UITextField new];
         _phoneField.keyboardType = UIKeyboardTypeNumberPad;
-        _phoneField.placeholder = @"请输入手机号码";
+        _phoneField.placeholder = @"เบอร์มือถือ";
          [_phoneField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
         _phoneField.font =[UIFont fontByName:@"" fontSize:16];
         _phoneField.textColor = [UIColor whiteColor];
@@ -96,7 +96,7 @@
         yuyeBtn.layer.cornerRadius = 5;
         yuyeBtn.backgroundColor = kColorWithHex(MCOLOR);
         [yuyeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [yuyeBtn setTitle:@"预约" forState:UIControlStateNormal];
+        [yuyeBtn setTitle:@"การนัดหมาย" forState:UIControlStateNormal];
         [yuyeBtn addTarget:self action:@selector(yuyeBtnEvent) forControlEvents:UIControlEventTouchUpInside];
         yuyeBtn.titleLabel.font = [UIFont fontByName:@"" fontSize:15];
         [self addSubview:yuyeBtn];
@@ -112,7 +112,7 @@
         cancelBtn.layer.cornerRadius = 5;
         cancelBtn.backgroundColor = [UIColor whiteColor];
         [cancelBtn setTitleColor:kColorWithHex(MCOLOR) forState:UIControlStateNormal];
-        [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+        [cancelBtn setTitle:@"การยกเลิก" forState:UIControlStateNormal];
         [cancelBtn addTarget:self action:@selector(cancelBtnEvent) forControlEvents:UIControlEventTouchUpInside];
         cancelBtn.titleLabel.font = [UIFont fontByName:@"" fontSize:15];
         [self addSubview:cancelBtn];
@@ -163,7 +163,7 @@
 - (void)yuyeBtnEvent {
     
     if (_nameField.text.length == 0) {
-        [CustomView alertMessage:@"请输入姓名" view:self];
+        [CustomView alertMessage:@"ชื่อ" view:self];
         return;
     }
     

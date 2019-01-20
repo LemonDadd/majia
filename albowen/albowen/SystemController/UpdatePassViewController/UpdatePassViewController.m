@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"修改密码";
+    self.title = @"เปลี่ยนรหัสผ่าน";
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = kColorWithHex(0xf9f9f9);
@@ -49,26 +49,24 @@
 
 - (void)subBtnEvent {
     if (self.oldPass.text.length == 0) {
-        [CustomView alertMessage:@"请输入旧密码" view:self.view];
+        [CustomView alertMessage:@"กรุณาตรวจสอบ" view:self.view];
         return;
     }
     if (self.passNew.text.length == 0) {
-        [CustomView alertMessage:@"请输入新密码" view:self.view];
+        [CustomView alertMessage:@"กรุณาตรวจสอบ" view:self.view];
         return;
     }
     if (self.confirmPass.text.length == 0) {
-        [CustomView alertMessage:@"请确认新密码" view:self.view];
+        [CustomView alertMessage:@"กรุณาตรวจสอบ" view:self.view];
         return;
     }
     
     if (![self.passNew.text isEqualToString:self.confirmPass.text]) {
-        [CustomView alertMessage:@"两次输入的密码不一致" view:self.view];
+        [CustomView alertMessage:@"กรุณาตรวจสอบ" view:self.view];
         return;
     }
-    [[CustomView getInstancetype]showWaitView:@"请稍后..." byView:self.view];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[CustomView getInstancetype]closeHUD];
-         [CustomView alertMessage:@"修改成功" view:self.view];
+         [CustomView alertMessage:@"ประสบความสําเร็จ" view:self.view];
     });
 }
 

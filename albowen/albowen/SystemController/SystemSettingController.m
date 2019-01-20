@@ -39,7 +39,7 @@
     }];
     
     _imageArray = @[@"my_bind_icon",@"my_update_icon"];
-    _titleArray =@[@"绑定手机",@"修改密码"];
+    _titleArray =@[@"ผูกโทรศัพท์มือถือ",@"เปลี่ยนรหัสผ่าน"];
 }
 
 - (void)setExtraCellLineHidden:(UITableView *)tableView {
@@ -52,7 +52,7 @@
     btn.layer.cornerRadius = 10.f;
     btn.layer.masksToBounds = YES;
     [btn setBackgroundColor:kColorWithHex(MCOLOR)];
-    [btn setTitle:@"退出登录" forState:UIControlStateNormal];
+    [btn setTitle:@"ออก" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(quitEvent) forControlEvents:UIControlEventTouchUpInside];
     btn.titleLabel.font = [UIFont fontByName:@"" fontSize:20];

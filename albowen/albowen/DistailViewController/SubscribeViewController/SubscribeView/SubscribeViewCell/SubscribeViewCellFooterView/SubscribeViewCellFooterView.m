@@ -26,7 +26,7 @@
         _yuyueBtn.layer.cornerRadius = 5.f;
         _yuyueBtn.backgroundColor = kColorWithHex(MCOLOR);
         [_yuyueBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_yuyueBtn setTitle:@"预约" forState:UIControlStateNormal];
+        [_yuyueBtn setTitle:@"การนัดหมาย" forState:UIControlStateNormal];
         _yuyueBtn.titleLabel.font = [UIFont fontByName:@"" fontSize:20];
         [self.contentView addSubview:_yuyueBtn];
         [_yuyueBtn mas_makeConstraints:^(MASConstraintMaker *make) {

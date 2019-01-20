@@ -21,7 +21,7 @@
         }];
         
         _titleLabel = [UILabel new];
-        _titleLabel.text = @"【预约提醒】";
+        _titleLabel.text = @"【แจ้งเตือนการนัดหมาย】";
         _titleLabel.font = [UIFont systemFontOfSize:18];
         _titleLabel.textColor = kColorWithHex(MCOLOR);
         [self.contentView addSubview:_titleLabel];

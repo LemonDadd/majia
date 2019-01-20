@@ -60,7 +60,7 @@ static UserInfoClass *staticUserInfoClass;
  */
 + (void)saveUserHeadImagePath:(NSString*)imagePath;
 
-
++ (void)saveUserHeadImage:(UIImage*)image;
 /**
  设置用户属性值
  

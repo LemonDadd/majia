@@ -16,9 +16,7 @@ target 'albowen' do
     pod 'NHFNSString'
     pod 'RealReachability'
     pod 'SDCycleScrollView','~> 1.73'
-    pod 'mob_smssdk'
     pod 'LYEmptyView'
-    pod 'BaiduMapKit' #百度地图SDK
     
     pod 'AVOSCloud'
     pod 'JPush'

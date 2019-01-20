@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"参观预约";
+    self.title = @"การนัดหมาย";
     // Do any additional setup after loading the view.
     _subscribeView = [SubscribeView new];
     [self.view addSubview:_subscribeView];

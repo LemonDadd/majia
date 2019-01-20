@@ -17,8 +17,6 @@
 @property (nonatomic, strong)UIImageView *leftImageV;
 @property (nonatomic, strong)UILabel *topLabel;
 
-@property (nonatomic, strong)UIButton *rightButton;
-
 
 //底部
 @property (nonatomic, strong)UIView *bottomView;
@@ -62,14 +60,6 @@
             make.left.right.height.equalTo(self.topView);
         }];
         [self initBottomUi];
-        
-        _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_rightButton addTarget:self action:@selector(registerAndBack) forControlEvents:UIControlEventTouchUpInside];
-        [_bgImageView addSubview:_rightButton];
-        [_rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.right.equalTo(self.topView);
-            make.width.height.equalTo(@30);
-        }];
         
     }
     return self;
@@ -170,16 +160,15 @@
     if (_styleType == LoginInputStyleTypePassLogin) {
         _bgImageView.image = [UIImage imageNamed:@"login_input_ico"];
         _leftImageV.image = [UIImage imageNamed:@"login_phone_ico"];
-        _topLabel.text =@"手机号";
+        _topLabel.text =@"เบอร์มือถือ";
         _topTextField.text = nil;
         _topTextField.keyboardType = UIKeyboardTypeNumberPad;
-        _topTextField.placeholder = @"请输入手机号";
-        [_rightButton setBackgroundImage:[UIImage imageNamed:@"login_register_ico"] forState:UIControlStateNormal];
+        _topTextField.placeholder = @"เบอร์มือถือ";
         _bottomLeftImageV.image = [UIImage imageNamed:@"login_pass_ico"];
-        _bottomLabel.text = @"密码";
+        _bottomLabel.text = @"รหัสผ่าน";
         _bottomTextField.text = nil;
         _bottomTextField.keyboardType = UIKeyboardTypeDefault;
-        _bottomTextField.placeholder = @"请输入密码";
+        _bottomTextField.placeholder = @"รหัสผ่าน";
         _bottomTextField.secureTextEntry = YES;
         _codeButton.hidden = YES;
         _passButton.hidden = NO;
@@ -189,11 +178,10 @@
     if (styleType == LoginInputStyleTypeCodeLogin) {
         _bgImageView.image = [UIImage imageNamed:@"login_input_ico"];
         _leftImageV.image = [UIImage imageNamed:@"login_phone_ico"];
-        _topLabel.text =@"手机号";
+        _topLabel.text =@"เบอร์มือถือ";
         _topTextField.text = nil;
-        _topTextField.placeholder = @"请输入手机号";
+        _topTextField.placeholder = @"เบอร์มือถือ";
         _topTextField.keyboardType = UIKeyboardTypeNumberPad;
-        [_rightButton setBackgroundImage:[UIImage imageNamed:@"login_register_ico"] forState:UIControlStateNormal];
         _bottomLeftImageV.image = [UIImage imageNamed:@"login_code_ico"];
         _bottomLabel.text = @"验证码";
         _bottomTextField.text = nil;
@@ -208,14 +196,13 @@
     if (styleType == LoginInputStyleTypeRegisterPass) {
         _bgImageView.image = [UIImage imageNamed:@"Register_input_ico"];
         _leftImageV.image = [UIImage imageNamed:@"Register_pass_ico"];
-        _topLabel.text =@"密码";
+        _topLabel.text =@"รหัสผ่าน";
         _topTextField.text = nil;
-        _topTextField.placeholder = @"请输入密码";
-        [_rightButton setBackgroundImage:[UIImage imageNamed:@"login_back_ico"] forState:UIControlStateNormal];
+        _topTextField.placeholder = @"รหัสผ่าน";
         _bottomLeftImageV.image = [UIImage imageNamed:@"Register_pass_ico"];
-        _bottomLabel.text = @"再次输入";
+        _bottomLabel.text = @"รหัสผ่าน";
         _bottomTextField.text = nil;
-        _bottomTextField.placeholder = @"请再次输入密码";
+        _bottomTextField.placeholder = @"รหัสผ่าน";
         _bottomTextField.secureTextEntry = YES;
         _codeButton.hidden = YES;
         _passButton.hidden = NO;
@@ -225,21 +212,20 @@
     if (styleType == LoginInputStyleTypeRegisterCode) {
         _bgImageView.image = [UIImage imageNamed:@"Register_input_ico"];
         _leftImageV.image = [UIImage imageNamed:@"Register_phone_ico"];
-        _topLabel.text =@"手机号";
+        _topLabel.text =@"เบอร์มือถือ";
         _topTextField.text = nil;
         _topTextField.keyboardType = UIKeyboardTypeNumberPad;
-        _topTextField.placeholder = @"请输入手机号";
-        [_rightButton setBackgroundImage:[UIImage imageNamed:@"login_back_ico"] forState:UIControlStateNormal];
+        _topTextField.placeholder = @"เบอร์มือถือ";
         _bottomLeftImageV.image = [UIImage imageNamed:@"Register_code_ico"];
-        _bottomLabel.text = @"验证码";
+        _bottomLabel.text = @"รหัสยืนยัน";
         _bottomTextField.text = nil;
-        _bottomTextField.placeholder = @"请输入验证码";
+        _bottomTextField.placeholder = @"รหัสยืนยัน";
         _bottomTextField.keyboardType = UIKeyboardTypeNumberPad;
         _bottomTextField.secureTextEntry = false;
         _codeButton.hidden = NO;
         _passButton.hidden = YES;
         [_codeButton setBackgroundImage:[UIImage imageNamed:@"Register_codebtn_ico"] forState:UIControlStateNormal];
-        [_codeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+        [_codeButton setTitle:@"รหัสยืนยัน" forState:UIControlStateNormal];
     }
     
 }
@@ -274,7 +260,7 @@
             dispatch_source_cancel(_timer);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf.codeButton setBackgroundImage:[UIImage imageNamed:@"login_codebtn_ico"] forState:UIControlStateNormal];
-                [weakSelf.codeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+                [weakSelf.codeButton setTitle:@"รหัสยืนยัน" forState:UIControlStateNormal];
                  [weakSelf.codeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
                 sender.userInteractionEnabled = YES;
             });
@@ -284,7 +270,7 @@
                 [UIView beginAnimations:nil context:nil];
                 [UIView setAnimationDuration:1];
                 [weakSelf.codeButton setBackgroundImage:[UIImage imageNamed:@"login_code_no_ico"] forState:UIControlStateNormal];
-                [weakSelf.codeButton setTitle:[NSString stringWithFormat:@"验证码(%zds)",(long)timeout] forState:UIControlStateNormal];
+                [weakSelf.codeButton setTitle:[NSString stringWithFormat:@"(%zds)",(long)timeout] forState:UIControlStateNormal];
                  [weakSelf.codeButton setTitleColor:K_HColor forState:UIControlStateNormal];
                 [UIView commitAnimations];
                 sender.userInteractionEnabled = NO;

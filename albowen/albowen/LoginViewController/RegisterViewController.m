@@ -30,32 +30,16 @@
     }];
     
     
-    UIImageView *iconImageView = [UIImageView new];
-    iconImageView.image = [UIImage imageNamed:@"logo"];
-    [self.view addSubview:iconImageView];
-    [iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.bottom.equalTo(titleImageView.mas_bottom);
-    }];
-    
-    UIImageView *nameImageV = [UIImageView new];
-    nameImageV.image = [UIImage imageNamed:@"login_ico"];
-    [self.view addSubview:nameImageV];
-    [nameImageV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.top.equalTo(iconImageView.mas_bottom);
-    }];
-    
+   
     _inputView = [LoginInputView new];
     _inputView.styleType = LoginInputStyleTypeRegisterCode;
     [self.view addSubview:_inputView];
     [_inputView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.top.equalTo(nameImageV.mas_bottom).offset(20);
+        make.center.equalTo(self.view);
     }];
     
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [loginBtn setTitle:@"下一步" forState:UIControlStateNormal];
+    [loginBtn setTitle:@"ขั้นตอนต่อไป" forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(next) forControlEvents:UIControlEventTouchUpInside];
     [loginBtn setBackgroundImage:[UIImage imageNamed:@"Register_btn_ico"] forState:UIControlStateNormal];
     loginBtn.titleLabel.font = KFONT(15);
@@ -70,11 +54,11 @@
 - (void)next {
     //密码登录
     if (self.inputView.topTextField.text.length == 0) {
-        [CustomView alertMessage:@"请输入手机号" view:self.view];
+        [CustomView alertMessage:@"ใส่เบอร์มือถือของคุณครับ" view:self.view];
         return;
     }
     if (self.inputView.bottomTextField.text.length == 0) {
-        [CustomView alertMessage:@"请输入验证码" view:self.view];
+        [CustomView alertMessage:@"กรุณาป้อนรหัสยืนยัน" view:self.view];
         return;
     }
 }

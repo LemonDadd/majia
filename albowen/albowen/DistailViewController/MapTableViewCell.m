@@ -35,7 +35,7 @@
         }];
         
         _dianhua = [UILabel new];
-        _dianhua.text = @"开始导航";
+        _dianhua.text = @"เริ่มต้นนำร่อง";
         _dianhua.font = [UIFont systemFontOfSize:15];
         [self.contentView addSubview:_dianhua];
         [_dianhua mas_makeConstraints:^(MASConstraintMaker *make) {

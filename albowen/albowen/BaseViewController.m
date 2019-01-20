@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "LoginViewController.h"
 
 @interface BaseViewController ()
 
@@ -21,7 +22,8 @@
 }
 
 - (void)gotoLoginViewController {
-    
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[LoginViewController new]];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 /*

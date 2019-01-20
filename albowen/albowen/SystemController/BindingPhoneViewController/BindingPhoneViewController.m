@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = kColorWithHex(0xf9f9f9);
-    self.title = @"绑定手机";
+    self.title = @"ผูกโทรศัพท์มือถือ";
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
@@ -56,7 +56,7 @@
         if(timeout<=0){ //倒计时结束，关闭
             dispatch_source_cancel(_timer);
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.sendBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+                [self.sendBtn setTitle:@"รหัสยืนยัน" forState:UIControlStateNormal];
                 sender.userInteractionEnabled = YES;
             });
         }else{
@@ -64,7 +64,7 @@
                 
                 [UIView beginAnimations:nil context:nil];
                 [UIView setAnimationDuration:1];
-                [self.sendBtn setTitle:[NSString stringWithFormat:@"%zds",timeout] forState:UIControlStateNormal];
+                [self.sendBtn setTitle:[NSString stringWithFormat:@"%ds",timeout] forState:UIControlStateNormal];
                 [UIView commitAnimations];
                 sender.userInteractionEnabled = NO;
             });
@@ -76,17 +76,17 @@
 
 - (void)bindBtnEvent {
     if (self.phoneTF.text.length == 0) {
-        [CustomView alertMessage:@"请输入手机号码" view:self.view];
+        [CustomView alertMessage:@"โปรดระบุหมายเลขโทรศัพท์มือถือ" view:self.view];
         return;
     }
     if (self.msgTF.text.length == 0) {
-        [CustomView alertMessage:@"请输入短信验证码" view:self.view];
+        [CustomView alertMessage:@"กรุณาป้อนข้อความการตรวจสอบรหัส" view:self.view];
         return;
     }
-    [[CustomView getInstancetype]showWaitView:@"请稍后..." byView:self.view];
+    [[CustomView getInstancetype]showWaitView:@"โปรดรอสักครู่..." byView:self.view];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
          [[CustomView getInstancetype]closeHUD];
-        [CustomView alertMessage:@"绑定成功" view:self.view];
+        [CustomView alertMessage:@"ผูกสำเร็จ" view:self.view];
     });
 //    [AllInterfaceRequest requestUpdateMobileByMobile:self.phoneTF.text validCode:self.msgTF.text validid:@"" request:^(BOOL message, BOOL success, NSString *errorMsg, BOOL error) {
 //       

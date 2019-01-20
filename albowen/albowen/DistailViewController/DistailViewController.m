@@ -49,7 +49,7 @@
     UIButton *bottom = [UIButton buttonWithType:UIButtonTypeCustom];
     [bottom setBackgroundColor:[UIColor colorWithNumber:MCOLOR]];
     [bottom setTitleColor:[UIColor whiteColor] forState: UIControlStateNormal];
-    [bottom setTitle:@"立即预约" forState:UIControlStateNormal];
+    [bottom setTitle:@"การนัดหมาย" forState:UIControlStateNormal];
     [bottom addTarget:self action:@selector(btnEVENT) forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:bottom];
     bottom.layer.cornerRadius =25;

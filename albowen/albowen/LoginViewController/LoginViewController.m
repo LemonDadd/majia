@@ -9,6 +9,9 @@
 #import "LoginViewController.h"
 #import "LoginInputView.h"
 #import "AppDelegate.h"
+#import "RegisterViewController.h"
+#import "RegisterNextViewController.h"
+#import "LoginInterface.h"
 
 @interface LoginViewController ()
 
@@ -35,34 +38,16 @@
     }];
     
     
-    UIImageView *iconImageView = [UIImageView new];
-    iconImageView.image = [UIImage imageNamed:@"logo"];
-    [self.view addSubview:iconImageView];
-    [iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.bottom.equalTo(titleImageView.mas_bottom).offset(10);
-    }];
-    
-    UIImageView *nameImageV = [UIImageView new];
-    nameImageV.image = [UIImage imageNamed:@"login_ico"];
-    [self.view addSubview:nameImageV];
-    [nameImageV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.top.equalTo(iconImageView.mas_bottom);
-    }];
-    
-    
     
     _inputView = [LoginInputView new];
     _inputView.styleType = LoginInputStyleTypePassLogin;
     [self.view addSubview:_inputView];
     [_inputView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.top.equalTo(nameImageV.mas_bottom).offset(20);
+        make.center.equalTo(self.view);
     }];
     
     _leftLabel = [UILabel new];
-    _leftLabel.text = @"密码登录";
+    _leftLabel.text = @"การลงทะเบียน";
     _leftLabel.font = [UIFont systemFontOfSize:12];
     _leftLabel.textColor = K_HColor;
     [self.view addSubview:_leftLabel];
@@ -83,7 +68,7 @@
     UILabel *rightLabel = [UILabel new];
     rightLabel.font = [UIFont systemFontOfSize:12];
     rightLabel.textColor = K_HColor;
-    rightLabel.text = @"忘记密码?";
+    rightLabel.text = @"ลืมรหัสผ่าน？";
     [self.view addSubview:rightLabel];
     [rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.inputView).offset(-8);
@@ -102,7 +87,9 @@
     
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [loginBtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
-    [loginBtn setBackgroundImage:[UIImage imageNamed:@"login_btn_ico"] forState:UIControlStateNormal];
+    [loginBtn setBackgroundImage:[UIImage imageNamed:@"Register_btn_ico"] forState:UIControlStateNormal];
+    [loginBtn setTitle:@"เข้าสู่ระบบ" forState:UIControlStateNormal];
+    [loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     loginBtn.titleLabel.font = KFONT(15);
     [self.view addSubview:loginBtn];
     [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -127,14 +114,8 @@
  切换验证码登录与密码登录
  */
 - (void)leftEvent:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    if (sender.selected) {
-        _leftLabel.text = @"验证码登录";
-        _inputView.styleType = LoginInputStyleTypeCodeLogin;
-    } else {
-         _leftLabel.text = @"密码登录";
-         _inputView.styleType = LoginInputStyleTypePassLogin;
-    }
+    RegisterViewController *vc= [RegisterViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /**
@@ -143,12 +124,23 @@
 - (void)rightEvent {
     //todo
     //忘记密码点击
+    RegisterNextViewController *vc= [RegisterNextViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /**
  登录
  */
 - (void)login {
+    [LoginInterface requestLoginPassByPhone:self.inputView.topTextField.text pass:self.inputView.bottomTextField.text request:^(UserInfoClass * _Nonnull model, NSString * _Nonnull errorMsg) {
+        if (model) {
+            [model saveUserInfoClass];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }else {
+            [CustomView alertMessage:errorMsg view:self.view];
+        }
+    }];
+    
     
 }
 

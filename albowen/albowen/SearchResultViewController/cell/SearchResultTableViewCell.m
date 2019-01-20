@@ -10,11 +10,6 @@
 
 @interface SearchResultTableViewCell()
 
-@property (nonatomic, strong)UIImageView *leftImageView;
-@property (nonatomic, strong)UILabel *nameLabel;
-@property (nonatomic, strong)UILabel *detailLabel;
-@property (nonatomic, strong)UILabel *countLabel;
-@property (nonatomic, strong)UIImageView *countImageV;
 
 @end
 
@@ -53,7 +48,6 @@
         }];
         
         _nameLabel = [UILabel new];
-        _nameLabel.text = @"爱情转移";
         _nameLabel.font = KFONT(15);
         [self.contentView addSubview:_nameLabel];
         [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -63,7 +57,6 @@
         }];
         
         _detailLabel = [UILabel new];
-        _detailLabel.text = @"MV:大厦 作曲: 谁谁谁";
         _detailLabel.font = KFONT(15);
         _detailLabel.textColor=K_HColor;
         [self.contentView addSubview:_detailLabel];

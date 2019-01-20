@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MyColViewController : BaseViewController
 
+@property (nonatomic, assign)BOOL isCol;
+
 @end
 
 NS_ASSUME_NONNULL_END

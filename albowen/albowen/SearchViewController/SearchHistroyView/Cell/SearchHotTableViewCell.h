@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^HotTipDidSeletd)(NSString *title);
+typedef void(^HotTipDidSeletd)(ResourceClass *title);
 
 @interface SearchHotTableViewCell : UITableViewCell
 
