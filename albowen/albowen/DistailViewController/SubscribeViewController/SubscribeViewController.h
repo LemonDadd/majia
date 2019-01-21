@@ -10,5 +10,6 @@
 
 @interface SubscribeViewController : BaseViewController
 
+@property (nonatomic, strong)ResourceClass *model;
 
 @end

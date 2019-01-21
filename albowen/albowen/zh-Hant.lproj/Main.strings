@@ -1,0 +1,36 @@
+
+/* Class = "UITextField"; placeholder = "请输入手机号码"; ObjectID = "6WN-nX-sDa"; */
+"6WN-nX-sDa.placeholder" = "请输入手机号码";
+
+/* Class = "UIButton"; normalTitle = "提交"; ObjectID = "9eQ-e0-wnw"; */
+"9eQ-e0-wnw.normalTitle" = "提交";
+
+/* Class = "UILabel"; text = "+86"; ObjectID = "EO6-Jw-eEp"; */
+"EO6-Jw-eEp.text" = "+86";
+
+/* Class = "UIButton"; normalTitle = "获取"; ObjectID = "O0B-40-0F5"; */
+"O0B-40-0F5.normalTitle" = "获取";
+
+/* Class = "UITextField"; placeholder = "验证码"; ObjectID = "Q4N-pe-Gq4"; */
+"Q4N-pe-Gq4.placeholder" = "验证码";
+
+/* Class = "UILabel"; text = "旧密码"; ObjectID = "SQU-51-t6G"; */
+"SQU-51-t6G.text" = "旧密码";
+
+/* Class = "UITextField"; placeholder = "请输入新密码"; ObjectID = "UKg-6S-fyE"; */
+"UKg-6S-fyE.placeholder" = "请输入新密码";
+
+/* Class = "UIButton"; normalTitle = "提交"; ObjectID = "a9W-GQ-xgc"; */
+"a9W-GQ-xgc.normalTitle" = "提交";
+
+/* Class = "UILabel"; text = "新密码"; ObjectID = "epX-lv-BPO"; */
+"epX-lv-BPO.text" = "新密码";
+
+/* Class = "UITextField"; placeholder = "请输入旧密码"; ObjectID = "xBh-M9-XBD"; */
+"xBh-M9-XBD.placeholder" = "请输入旧密码";
+
+/* Class = "UITextField"; placeholder = "确认新密码"; ObjectID = "yDR-h9-mMa"; */
+"yDR-h9-mMa.placeholder" = "确认新密码";
+
+/* Class = "UILabel"; text = "确认新密码"; ObjectID = "z5I-Iy-SEs"; */
+"z5I-Iy-SEs.text" = "确认新密码";

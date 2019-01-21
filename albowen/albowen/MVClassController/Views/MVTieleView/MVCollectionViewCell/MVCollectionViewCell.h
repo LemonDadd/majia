@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MVCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong)MvListModel *model;
+@property (nonatomic, strong)ResourceClass *model;
 
 @end
 

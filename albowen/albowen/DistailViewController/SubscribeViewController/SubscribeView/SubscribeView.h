@@ -14,4 +14,5 @@
 @property (nonatomic, strong)UITableView *mainTabView;
 @property (nonatomic, strong)UIView *navBarView;
 @property (nonatomic, strong)SubscribeViewModelClass *modelClass;
+@property (nonatomic, strong)ResourceClass *model;
 @end

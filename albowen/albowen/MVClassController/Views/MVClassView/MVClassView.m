@@ -47,13 +47,13 @@
     [self.col.mj_header beginRefreshing];
 }
 
-- (void)upPull {
-    KWeakSelf;
-    self.col.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        weakSelf.page++;
-        [weakSelf reStartRequestData];
-    }];
-}
+//- (void)upPull {
+//    KWeakSelf;
+//    self.col.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+//        weakSelf.page++;
+//        [weakSelf reStartRequestData];
+//    }];
+//}
 
 - (void)reStartRequestData {
      KWeakSelf;
@@ -63,6 +63,13 @@
             [weakSelf.col.mj_footer endRefreshing];
             if (message) {
                 weakSelf.model = message;
+                NSArray *a =[[NSUserDefaults standardUserDefaults]objectForKey:@"data"];
+                NSArray *b =[[NSUserDefaults standardUserDefaults]objectForKey:@"data"];
+                NSMutableArray *ma = [NSMutableArray new];
+                [ma addObjectsFromArray:[a arrayByAddingObjectsFromArray:b]];
+                ma = [self randomArray:ma];
+                weakSelf.model.MV  =[NSArray arrayWithArray:ma];
+                
                 [weakSelf.col reloadData];
             }
         }];
@@ -72,6 +79,13 @@
             [weakSelf.col.mj_footer endRefreshing];
             if (message) {
                 weakSelf.model = message;
+                NSArray *a =[[NSUserDefaults standardUserDefaults]objectForKey:@"data"];
+                NSArray *b =[[NSUserDefaults standardUserDefaults]objectForKey:@"data"];
+                NSMutableArray *ma = [NSMutableArray new];
+                [ma addObjectsFromArray:a];
+                [ma addObjectsFromArray:b];
+                ma = [self randomArray:ma];
+                weakSelf.model.MV  =[NSArray arrayWithArray:ma];
                 [weakSelf.col reloadData];
             }
         }];
@@ -90,7 +104,8 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MVCollectionViewCell * cell = (MVCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"MVCollectionViewCell" forIndexPath:indexPath];
-    MvListModel *model = [MvListModel mj_objectWithKeyValues:_model.MV[indexPath.row]];
+    
+    ResourceClass *model = [ResourceClass mj_objectWithKeyValues:_model.MV[indexPath.row]];
     cell.model = model;
     return cell;
 }
@@ -113,7 +128,9 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     //todo
     //mv点击事件
+    ResourceClass *model = [ResourceClass mj_objectWithKeyValues:_model.MV[indexPath.row]];
     DistailViewController *vc = [DistailViewController new];
+    vc.model =model;
     [self.viewController.navigationController pushViewController:vc animated:YES];
 }
 
@@ -133,7 +150,23 @@
 - (void)setType:(MVClassViewType)type {
     _type = type;
     [self addHistoryData];
-    [self upPull];
+    //[self upPull];
+}
+
+
+-(NSMutableArray *)randomArray:(NSMutableArray *)ma
+{
+    //随机数产生结果
+    NSMutableArray *resultArray=[[NSMutableArray alloc] initWithCapacity:0];
+    //随机数个数
+    NSInteger m=ma.count;
+    for (int i=0; i<m; i++) {
+        int t=arc4random()%ma.count;
+        resultArray[i]=ma[t];
+        ma[t]=[ma lastObject]; //为更好的乱序，故交换下位置
+        [ma removeLastObject];
+    }
+    return resultArray;
 }
 
 @end

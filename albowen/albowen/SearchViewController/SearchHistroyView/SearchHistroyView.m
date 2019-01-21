@@ -141,7 +141,7 @@
     //随机数产生结果
     NSMutableArray *resultArray=[[NSMutableArray alloc] initWithCapacity:0];
     //随机数个数
-    NSInteger m=8;
+    NSInteger m=ma.count;
     for (int i=0; i<m; i++) {
         int t=arc4random()%ma.count;
         resultArray[i]=ma[t];

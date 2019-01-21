@@ -26,6 +26,8 @@
     [_subscribeView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    
+    _subscribeView.model = self.model;
 }
 
 - (void)didReceiveMemoryWarning {

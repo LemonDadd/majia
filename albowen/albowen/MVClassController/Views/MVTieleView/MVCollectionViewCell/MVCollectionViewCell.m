@@ -17,7 +17,7 @@
 @property (nonatomic, strong)UILabel *titleLabel;
 @property (nonatomic, strong)UIButton *userButton;
 
-
+@property (nonatomic, assign)int x;
 
 @end
 
@@ -27,6 +27,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+         _x = arc4random() % 5;
+        
         _bgImageView = [UIImageView new];
         _bgImageView.backgroundColor = [UIColor groupTableViewBackgroundColor];
         [self.contentView addSubview:_bgImageView];
@@ -51,6 +54,7 @@
         [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.picImageView);
             make.left.equalTo(self.picImageView.mas_right).offset(8);
+            make.right.equalTo(self.contentView).offset(-5);
         }];
         
         _locationLabel = [UILabel new];
@@ -66,7 +70,7 @@
         _titleLabel = [UILabel new];
         _titleLabel.textColor = [UIColor whiteColor];
         _titleLabel.font = [UIFont systemFontOfSize:15];
-        _titleLabel.numberOfLines = 0;
+        _titleLabel.numberOfLines = 3;
         [self.contentView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.picImageView);
@@ -85,13 +89,13 @@
     return self;
 }
 
-- (void)setModel:(MvListModel *)model {
+- (void)setModel:(ResourceClass *)model {
     _model = model;
-    [_bgImageView sd_setImageWithURL:[NSURL URLWithString:model.img] placeholderImage:Def];
-    [_picImageView sd_setImageWithURL:[NSURL URLWithString:model.headimg] placeholderImage:Def];
-    _nameLabel.text = model.user;
-    _locationLabel.text = model.address;
-    _titleLabel.text = model.title;
+    
+    [_bgImageView sd_setImageWithURL:[NSURL URLWithString:model.imageList[_x]] placeholderImage:Def];
+    [_picImageView sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:Def];
+    _nameLabel.text = model.name;
+    _titleLabel.text = model.dis;
 }
 
 @end

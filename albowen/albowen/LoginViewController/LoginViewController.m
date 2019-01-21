@@ -98,17 +98,29 @@
         make.top.equalTo(self.leftLabel.mas_bottom);
     }];
     
-    
-    _tripartiteLoginView = [UIView new];
-    [self.view addSubview:_tripartiteLoginView];
-    [_tripartiteLoginView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view).offset(-20);
-        make.height.equalTo(@40);
-        make.left.right.equalTo(loginBtn);
+    UILabel *bottom = [UILabel new];
+    bottom.font = [UIFont systemFontOfSize:15];
+    bottom.textColor = K_HColor;
+    bottom.text = @"ไม่ล็อกอิน";
+    [self.view addSubview:bottom];
+    [bottom mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(loginBtn);
+        make.top.equalTo(loginBtn.mas_bottom).offset(10);
     }];
 
+    
+    UIButton *btn  = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setBackgroundColor:[UIColor clearColor]];
+    [btn addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(bottom);
+    }];
 }
 
+- (void)close {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 /**
  切换验证码登录与密码登录

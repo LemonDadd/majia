@@ -251,25 +251,25 @@
 + (NSString *)jk_dayFromWeekday:(NSDate *)date {
     switch([date jk_weekday]) {
         case 1:
-            return @"星期天";
+            return @"วันอาทิตย์";
             break;
         case 2:
-            return @"星期一";
+            return @"วันจันทร์";
             break;
         case 3:
-            return @"星期二";
+            return @"วันอังคาร";
             break;
         case 4:
-            return @"星期三";
+            return @"วันพุธ";
             break;
         case 5:
-            return @"星期四";
+            return @"วันพฤหัสบดี";
             break;
         case 6:
-            return @"星期五";
+            return @"วันศุกร์";
             break;
         case 7:
-            return @"星期六";
+            return @"วันเสาร์";
             break;
         default:
             break;

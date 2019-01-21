@@ -59,7 +59,7 @@
     ResourceClass *model = _allResource[indexPath.row];
     [cell.leftImageView sd_setImageWithURL:[NSURL URLWithString:model.imageList[0]] placeholderImage:Def];
     cell.nameLabel.text = model.name;
-    cell.detailLabel.text = model.;
+    cell.detailLabel.text = model.dis;
     cell.countLabel.text = model.fangjian;
     return cell;
 }

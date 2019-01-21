@@ -63,7 +63,7 @@
             cell = [[SubscribeViewTopCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"SubscribeViewTopCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
-        cell.contentLabel.text =@"adasas";
+        cell.contentLabel.text =_model.tiaokuan;
         return cell;
     } else {
         SubscribeViewBottomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SubscribeViewBottomCell"];
@@ -176,6 +176,11 @@
 
 - (void)leftBtnEvent {
     [self.viewController.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)setModel:(ResourceClass *)model {
+    _model = model;
+    [_mainTabView reloadData];
 }
 
 @end

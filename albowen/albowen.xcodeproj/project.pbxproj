@@ -29,6 +29,7 @@
 		B01D390321F3122800BC87B8 /* BindingPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D38FE21F3122800BC87B8 /* BindingPhoneViewController.m */; };
 		B01D390421F3122800BC87B8 /* UpdatePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390121F3122800BC87B8 /* UpdatePassViewController.m */; };
 		B01D390521F3122800BC87B8 /* SystemSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390221F3122800BC87B8 /* SystemSettingController.m */; };
+		B01D390821F58DA700BC87B8 /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390721F58DA700BC87B8 /* TextTableViewCell.m */; };
 		DA8BB8A521EA135200506854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB8A421EA135200506854 /* AppDelegate.m */; };
 		DA8BB8A821EA135200506854 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB8A721EA135200506854 /* ViewController.m */; };
 		DA8BB8AB21EA135200506854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8BB8A921EA135200506854 /* Main.storyboard */; };
@@ -151,6 +152,22 @@
 		B01D390021F3122800BC87B8 /* UpdatePassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePassViewController.h; sourceTree = "<group>"; };
 		B01D390121F3122800BC87B8 /* UpdatePassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePassViewController.m; sourceTree = "<group>"; };
 		B01D390221F3122800BC87B8 /* SystemSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSettingController.m; sourceTree = "<group>"; };
+		B01D390621F58DA700BC87B8 /* TextTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextTableViewCell.h; sourceTree = "<group>"; };
+		B01D390721F58DA700BC87B8 /* TextTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextTableViewCell.m; sourceTree = "<group>"; };
+		B01D390921F597B700BC87B8 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Main.strings; sourceTree = "<group>"; };
+		B01D390A21F597B700BC87B8 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B01D390B21F597D600BC87B8 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		B01D390C21F597D700BC87B8 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B01D390D21F597E200BC87B8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		B01D390E21F597E200BC87B8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B01D390F21F5981700BC87B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		B01D391021F5981700BC87B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B01D391121F5982100BC87B8 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Main.strings"; sourceTree = "<group>"; };
+		B01D391221F5982100BC87B8 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B01D391321F5982800BC87B8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		B01D391421F5982800BC87B8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B01D391521F5983700BC87B8 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Main.strings; sourceTree = "<group>"; };
+		B01D391621F5983700BC87B8 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BE3A252BBA1B6B13B1723648 /* libPods-albowen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-albowen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8BB8A021EA135200506854 /* albowen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = albowen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8BB8A321EA135200506854 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -644,6 +661,8 @@
 				DA8BB9A221F206FF00506854 /* PhoneTableViewCell.m */,
 				DA8BB9A721F2162500506854 /* MapTableViewCell.h */,
 				DA8BB9A821F2162500506854 /* MapTableViewCell.m */,
+				B01D390621F58DA700BC87B8 /* TextTableViewCell.h */,
+				B01D390721F58DA700BC87B8 /* TextTableViewCell.m */,
 			);
 			path = DistailViewController;
 			sourceTree = "<group>";
@@ -1115,6 +1134,7 @@
 				DA8BB99C21F0C33800506854 /* NSDate+JKFormatter.m in Sources */,
 				DA8BB8E921EA22CA00506854 /* LoginInputView.m in Sources */,
 				DA8BB98421F0C0C000506854 /* SubscribeViewCellFooterView.m in Sources */,
+				B01D390821F58DA700BC87B8 /* TextTableViewCell.m in Sources */,
 				DA8BB99A21F0C33800506854 /* NSDate+JKExtension.m in Sources */,
 				DA8BB9C521F2217800506854 /* MVClassView.m in Sources */,
 				DA8BB94F21EF7C4B00506854 /* MineViewTabViewCell.m in Sources */,
@@ -1161,6 +1181,13 @@
 			isa = PBXVariantGroup;
 			children = (
 				DA8BB8AA21EA135200506854 /* Base */,
+				B01D390921F597B700BC87B8 /* th */,
+				B01D390B21F597D600BC87B8 /* ko */,
+				B01D390D21F597E200BC87B8 /* ja */,
+				B01D390F21F5981700BC87B8 /* zh-Hans */,
+				B01D391121F5982100BC87B8 /* zh-HK */,
+				B01D391321F5982800BC87B8 /* zh-Hant */,
+				B01D391521F5983700BC87B8 /* id */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1169,6 +1196,13 @@
 			isa = PBXVariantGroup;
 			children = (
 				DA8BB8AF21EA135400506854 /* Base */,
+				B01D390A21F597B700BC87B8 /* th */,
+				B01D390C21F597D700BC87B8 /* ko */,
+				B01D390E21F597E200BC87B8 /* ja */,
+				B01D391021F5981700BC87B8 /* zh-Hans */,
+				B01D391221F5982100BC87B8 /* zh-HK */,
+				B01D391421F5982800BC87B8 /* zh-Hant */,
+				B01D391621F5983700BC87B8 /* id */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1180,6 +1214,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1239,6 +1274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1294,7 +1330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52HKCP4F62;
+				DEVELOPMENT_TEAM = 4C4BBJ8J25;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/albowen/PrefixHeader.pch";
 				INFOPLIST_FILE = albowen/Info.plist;
@@ -1315,7 +1351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52HKCP4F62;
+				DEVELOPMENT_TEAM = 4C4BBJ8J25;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/albowen/PrefixHeader.pch";
 				INFOPLIST_FILE = albowen/Info.plist;

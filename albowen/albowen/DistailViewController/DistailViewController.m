@@ -14,6 +14,7 @@
 #import "PhoneTableViewCell.h"
 #import "MapTableViewCell.h"
 #import <MapKit/MapKit.h>
+#import "TextTableViewCell.h"
 
 @interface DistailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -67,11 +68,12 @@
 
 - (void)btnEVENT {
     SubscribeViewController *vc = [SubscribeViewController new];
+    vc.model = _model;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    return 8;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -127,7 +129,25 @@
         return cell;
     }
     
-    
+    if (indexPath.section ==5 || indexPath.section ==6||indexPath.section ==7) {
+        TextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextTableViewCell"];
+        if (cell == nil) {
+            cell = [[TextTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TextTableViewCell"];
+        }
+        
+        if (indexPath.section ==5) {
+            cell.title.text = @"การขนส่ง";
+            cell.text.text = _model.jiaotong;
+        } else if (indexPath.section ==6) {
+            cell.title.text = @"ครอบครัว";
+            cell.text.text = _model.fangxing;
+        } else if (indexPath.section ==7) {
+            cell.title.text = @"สิ่งอํานวยความสะดวก";
+            cell.text.text = _model.sheshi;
+        }
+        
+        return cell;
+    }
     return [UITableViewCell new];
 }
 
@@ -137,14 +157,14 @@
     
     if (indexPath.section ==3) {
         //服务咨询
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"บริการให้คำปรึกษา" message:@"โทร . 0351-4222173" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"บริการให้คำปรึกษา" message:@"โทร . 02-2281-5051" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"การยกเลิก" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             
         }];
         
         UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"โทร" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://0351-4222173"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://02-2281-5051"]];
         }];
         
         // Add the actions.
