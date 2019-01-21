@@ -15,10 +15,17 @@
 #import "MapTableViewCell.h"
 #import <MapKit/MapKit.h>
 #import "TextTableViewCell.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface DistailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface DistailViewController ()<UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate>
 
 @property (nonatomic, strong)UITableView *tableView;
+
+@property (strong, nonatomic) CLLocationManager *manager;
+
+@property (nonatomic, assign)  double currentLatitude;
+
+@property (nonatomic, assign)  double currentLongitute;
 
 @end
 
@@ -63,6 +70,46 @@
     }];
     
     _tableView.tableFooterView = view;
+    
+    _manager = [[CLLocationManager alloc] init];
+    [_manager requestWhenInUseAuthorization];//申请定位服务权限
+    _manager.delegate = self;
+     //设置定位精度
+     _manager.desiredAccuracy = kCLLocationAccuracyBest;
+     //定位频率,每隔多少米定位一次
+    CLLocationDistance distance = 10.0;//十米定位一次
+    _manager.distanceFilter = distance;
+}
+
+
+//代理方法
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+        //获取定位的坐标
+    CLLocation *location = [locations firstObject];
+    CLLocationCoordinate2D coordinate = location.coordinate;
+    _currentLongitute = coordinate.longitude;
+    _currentLatitude = coordinate.latitude;
+    [_manager stopUpdatingLocation];
+    // 起点
+    MKMapItem *currentLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate: CLLocationCoordinate2DMake(_currentLatitude, _currentLongitute) addressDictionary: nil]];
+    currentLocation.name = @"ตำแหน่งของฉัน";
+    // 目的地的位置
+    CLLocationCoordinate2D coords = CLLocationCoordinate2DMake([_model.lat floatValue], [_model.lng floatValue]);
+    MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark: [[MKPlacemark alloc] initWithCoordinate:coords addressDictionary:nil]];
+    toLocation.name = _model.name;
+    
+    NSArray *items = [NSArray arrayWithObjects:currentLocation, toLocation, nil];
+    NSDictionary *options = @{ MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving, MKLaunchOptionsMapTypeKey: [NSNumber numberWithInteger:MKMapTypeStandard], MKLaunchOptionsShowsTrafficKey: @YES };
+    
+    // 打开苹果地图应用，并呈现指定的item
+    [MKMapItem openMapsWithItems:items launchOptions:options];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+
+{
+    [CustomView alertMessage:@"รับความล้มเหลวในตำแหน่ง" view:self.view];
 }
 
 
@@ -176,20 +223,10 @@
     }
     
     if (indexPath.section ==4) {
-        // 起点
-        MKMapItem *currentLocation = [[MKMapItem alloc] initWithPlacemark:[[MKPlacemark alloc] initWithCoordinate: CLLocationCoordinate2DMake([_model.lat floatValue], [_model.lng floatValue]) addressDictionary: nil]];
-        currentLocation.name = @"ตำแหน่งของฉัน";
-             
-        // 目的地的位置
-        CLLocationCoordinate2D coords = CLLocationCoordinate2DMake([_model.lat floatValue], [_model.lng floatValue]);
-        MKMapItem *toLocation = [[MKMapItem alloc] initWithPlacemark: [[MKPlacemark alloc] initWithCoordinate:coords addressDictionary:nil]];
-        toLocation.name = _model.name;
         
-        NSArray *items = [NSArray arrayWithObjects:currentLocation, toLocation, nil];
-        NSDictionary *options = @{ MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving, MKLaunchOptionsMapTypeKey: [NSNumber numberWithInteger:MKMapTypeStandard], MKLaunchOptionsShowsTrafficKey: @YES };
+        [_manager startUpdatingLocation];
         
-        // 打开苹果地图应用，并呈现指定的item
-        [MKMapItem openMapsWithItems:items launchOptions:options];
+       
     }
     
 }
