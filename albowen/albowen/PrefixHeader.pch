@@ -30,5 +30,7 @@
 #import "NSDate+JKExtension.h"
 #import "UrlSetting.h"
 #import "LYEmptyViewHeader.h"
+#import <UserNotifications/UserNotifications.h>
+#import <AVOSCloud/AVOSCloud.h>
 
 #endif /* PrefixHeader_pch */

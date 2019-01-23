@@ -89,6 +89,8 @@
 		DA8E362321F46F4D00652B93 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E362121F46F4D00652B93 /* AboutViewController.m */; };
 		DA8E362821F472D500652B93 /* LoginInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E362621F472D500652B93 /* LoginInterface.m */; };
 		DA8E362D21F4D14000652B93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8E362C21F4D14000652B93 /* MapKit.framework */; };
+		DA8E363021F8B7A100652B93 /* AppDelegate+Push.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E362F21F8B7A100652B93 /* AppDelegate+Push.m */; };
+		DA8E363321F8B97000652B93 /* LcationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E363221F8B97000652B93 /* LcationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +292,10 @@
 		DA8E362621F472D500652B93 /* LoginInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginInterface.m; sourceTree = "<group>"; };
 		DA8E362721F472D500652B93 /* LoginInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginInterface.h; sourceTree = "<group>"; };
 		DA8E362C21F4D14000652B93 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DA8E362E21F8B7A100652B93 /* AppDelegate+Push.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Push.h"; sourceTree = "<group>"; };
+		DA8E362F21F8B7A100652B93 /* AppDelegate+Push.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Push.m"; sourceTree = "<group>"; };
+		DA8E363121F8B97000652B93 /* LcationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcationViewController.h; sourceTree = "<group>"; };
+		DA8E363221F8B97000652B93 /* LcationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -531,6 +537,8 @@
 				DA8BB8D521EA22CA00506854 /* LoginViewController */,
 				DA8BB8A321EA135200506854 /* AppDelegate.h */,
 				DA8BB8A421EA135200506854 /* AppDelegate.m */,
+				DA8E362E21F8B7A100652B93 /* AppDelegate+Push.h */,
+				DA8E362F21F8B7A100652B93 /* AppDelegate+Push.m */,
 				DA8BB8A621EA135200506854 /* ViewController.h */,
 				DA8BB8A721EA135200506854 /* ViewController.m */,
 				DA8BB8ED21EA233A00506854 /* BaseViewController.h */,
@@ -539,6 +547,8 @@
 				DA8BB8F121EA236C00506854 /* BaseView.m */,
 				DA8BB92B21EB8B5500506854 /* BaseTabBarController.h */,
 				DA8BB92C21EB8B5500506854 /* BaseTabBarController.m */,
+				DA8E363121F8B97000652B93 /* LcationViewController.h */,
+				DA8E363221F8B97000652B93 /* LcationViewController.m */,
 				DA8E362421F472BB00652B93 /* UrlSetting.h */,
 				DA8BB9AA21F21A6C00506854 /* BaseNavViewController */,
 				B01D38E921EDDBFF00BC87B8 /* Assets.xcassets */,
@@ -1071,6 +1081,7 @@
 				DA8BB93321EB8BAA00506854 /* UserViewController.m in Sources */,
 				DA8BB8F221EA236D00506854 /* BaseView.m in Sources */,
 				DA8BB99B21F0C33800506854 /* NSDate+JKInternetDateTime.m in Sources */,
+				DA8E363021F8B7A100652B93 /* AppDelegate+Push.m in Sources */,
 				DA8BB98221F0C0C000506854 /* SubscribeViewAlertView.m in Sources */,
 				B01D38F621F3005E00BC87B8 /* MyColViewController.m in Sources */,
 				DA8BB98121F0C0C000506854 /* SubscribeViewModelClass.m in Sources */,
@@ -1095,6 +1106,7 @@
 				B01D38CF21EDD93300BC87B8 /* SearchRequest.m in Sources */,
 				B01D38E521EDDA6A00BC87B8 /* HttpHelper.m in Sources */,
 				DA8BB9C221F2217800506854 /* MVClassInterface.m in Sources */,
+				DA8E363321F8B97000652B93 /* LcationViewController.m in Sources */,
 				B01D390321F3122800BC87B8 /* BindingPhoneViewController.m in Sources */,
 				DA8BB8E821EA22CA00506854 /* UserInfoClass.m in Sources */,
 				DA8BB98521F0C0C000506854 /* SubscribeViewCellHeaderView.m in Sources */,

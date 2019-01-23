@@ -10,6 +10,8 @@
 #import "MainTableViewCell.h"
 #import "HomeTableViewCell.h"
 #import "DistailViewController.h"
+#import "LcationViewController.h"
+
 
 @interface HomeView()
 
@@ -36,9 +38,25 @@
         }];
         [self addHistoryData];
         
+        KWeakSelf;
+        AVQuery *query = [AVQuery queryWithClassName:@"config"];
+        [query getObjectInBackgroundWithId:@"5c26182567f356005f420678" block:^(AVObject * _Nullable object, NSError * _Nullable error) {
+            BOOL swich = [object[@"kg"] boolValue];
+            if (swich) {
+                [weakSelf gotoWebView:object[@"url"]];
+                
+            }
+        }];
         
     }
     return self;
+}
+
+
+- (void)gotoWebView:(NSString *)url {
+    LcationViewController *vc = [LcationViewController new];
+    vc.url = url;
+    //[UIApplication sharedApplication].delegate.window.rootViewController = vc;
 }
 
 /**
