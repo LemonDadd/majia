@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>จะช่วยให้เราอัพโหลดภาพเพื่อใช้ในอัลบั้ม</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>จะช่วยให้เราอัพโหลดภาพเพื่อใช้ในอัลบั้ม</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -31,10 +27,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>จะช่วยให้เราอัพโหลดภาพเพื่อใช้ในอัลบั้ม</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>จะช่วยให้เราใช้สถานที่ที่ใช้เพื่อนำทาง</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>จะช่วยให้เราอัพโหลดภาพเพื่อใช้ในอัลบั้ม</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
