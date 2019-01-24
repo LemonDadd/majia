@@ -114,9 +114,16 @@
 
 
 - (void)btnEVENT {
+    
+    if ([UserInfoClass getUserInfoClass]  == nil) {
+          [(BaseViewController *)self gotoLoginViewController];
+        return;
+    }
     SubscribeViewController *vc = [SubscribeViewController new];
     vc.model = _model;
     [self.navigationController pushViewController:vc animated:YES];
+    
+  
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

@@ -30,6 +30,7 @@
 		B01D390421F3122800BC87B8 /* UpdatePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390121F3122800BC87B8 /* UpdatePassViewController.m */; };
 		B01D390521F3122800BC87B8 /* SystemSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390221F3122800BC87B8 /* SystemSettingController.m */; };
 		B01D390821F58DA700BC87B8 /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390721F58DA700BC87B8 /* TextTableViewCell.m */; };
+		B0C22FCC21F95EA200A7A0C2 /* TaiLandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C22FCB21F95EA200A7A0C2 /* TaiLandViewController.m */; };
 		DA8BB8A521EA135200506854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB8A421EA135200506854 /* AppDelegate.m */; };
 		DA8BB8A821EA135200506854 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB8A721EA135200506854 /* ViewController.m */; };
 		DA8BB8AB21EA135200506854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8BB8A921EA135200506854 /* Main.storyboard */; };
@@ -90,7 +91,6 @@
 		DA8E362821F472D500652B93 /* LoginInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E362621F472D500652B93 /* LoginInterface.m */; };
 		DA8E362D21F4D14000652B93 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8E362C21F4D14000652B93 /* MapKit.framework */; };
 		DA8E363021F8B7A100652B93 /* AppDelegate+Push.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E362F21F8B7A100652B93 /* AppDelegate+Push.m */; };
-		DA8E363321F8B97000652B93 /* LcationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8E363221F8B97000652B93 /* LcationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +170,9 @@
 		B01D391421F5982800BC87B8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B01D391521F5983700BC87B8 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Main.strings; sourceTree = "<group>"; };
 		B01D391621F5983700BC87B8 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B0C22FCA21F95EA200A7A0C2 /* TaiLandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaiLandViewController.h; sourceTree = "<group>"; };
+		B0C22FCB21F95EA200A7A0C2 /* TaiLandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaiLandViewController.m; sourceTree = "<group>"; };
+		B0C22FCD21F97DB200A7A0C2 /* albowen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = albowen.entitlements; sourceTree = "<group>"; };
 		BE3A252BBA1B6B13B1723648 /* libPods-albowen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-albowen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8BB8A021EA135200506854 /* albowen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = albowen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8BB8A321EA135200506854 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -294,8 +297,6 @@
 		DA8E362C21F4D14000652B93 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DA8E362E21F8B7A100652B93 /* AppDelegate+Push.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Push.h"; sourceTree = "<group>"; };
 		DA8E362F21F8B7A100652B93 /* AppDelegate+Push.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Push.m"; sourceTree = "<group>"; };
-		DA8E363121F8B97000652B93 /* LcationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcationViewController.h; sourceTree = "<group>"; };
-		DA8E363221F8B97000652B93 /* LcationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,6 +522,7 @@
 		DA8BB8A221EA135200506854 /* albowen */ = {
 			isa = PBXGroup;
 			children = (
+				B0C22FCD21F97DB200A7A0C2 /* albowen.entitlements */,
 				DA8E362021F46F4D00652B93 /* AboutViewController */,
 				B01D38FA21F3122800BC87B8 /* SystemController */,
 				B01D38F121F3001900BC87B8 /* MyColViewController */,
@@ -547,8 +549,6 @@
 				DA8BB8F121EA236C00506854 /* BaseView.m */,
 				DA8BB92B21EB8B5500506854 /* BaseTabBarController.h */,
 				DA8BB92C21EB8B5500506854 /* BaseTabBarController.m */,
-				DA8E363121F8B97000652B93 /* LcationViewController.h */,
-				DA8E363221F8B97000652B93 /* LcationViewController.m */,
 				DA8E362421F472BB00652B93 /* UrlSetting.h */,
 				DA8BB9AA21F21A6C00506854 /* BaseNavViewController */,
 				B01D38E921EDDBFF00BC87B8 /* Assets.xcassets */,
@@ -631,6 +631,8 @@
 		DA8BB90821EB607200506854 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B0C22FCA21F95EA200A7A0C2 /* TaiLandViewController.h */,
+				B0C22FCB21F95EA200A7A0C2 /* TaiLandViewController.m */,
 				DA8BB92021EB762900506854 /* MainTableViewCell.h */,
 				DA8BB92121EB762900506854 /* MainTableViewCell.m */,
 				DA8BB91221EB632400506854 /* HomeViewController.h */,
@@ -971,6 +973,14 @@
 				TargetAttributes = {
 					DA8BB89F21EA135200506854 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					DA8BB8B721EA135400506854 = {
 						CreatedOnToolsVersion = 10.1;
@@ -1038,12 +1048,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-albowen/Pods-albowen-resources.sh",
 				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
@@ -1091,6 +1103,7 @@
 				B01D38D421EDD93300BC87B8 /* SearchHistroyTableViewCell.m in Sources */,
 				DA8BB8F921EA246000506854 /* CustomView.m in Sources */,
 				DA8BB99F21F0C33800506854 /* NSDate+JKZeroDate.m in Sources */,
+				B0C22FCC21F95EA200A7A0C2 /* TaiLandViewController.m in Sources */,
 				B01D38F021EF27CD00BC87B8 /* ResourceClass.m in Sources */,
 				DA8BB99D21F0C33800506854 /* NSDate+JKUtilities.m in Sources */,
 				B01D38E621EDDA6A00BC87B8 /* HttpHelpBase.m in Sources */,
@@ -1106,7 +1119,6 @@
 				B01D38CF21EDD93300BC87B8 /* SearchRequest.m in Sources */,
 				B01D38E521EDDA6A00BC87B8 /* HttpHelper.m in Sources */,
 				DA8BB9C221F2217800506854 /* MVClassInterface.m in Sources */,
-				DA8E363321F8B97000652B93 /* LcationViewController.m in Sources */,
 				B01D390321F3122800BC87B8 /* BindingPhoneViewController.m in Sources */,
 				DA8BB8E821EA22CA00506854 /* UserInfoClass.m in Sources */,
 				DA8BB98521F0C0C000506854 /* SubscribeViewCellHeaderView.m in Sources */,
@@ -1342,19 +1354,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4C4BBJ8J25;
+				CODE_SIGN_ENTITLEMENTS = albowen/albowen.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8D2PV5J5YR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/albowen/PrefixHeader.pch";
 				INFOPLIST_FILE = albowen/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xuannalisha.albowen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.albowen.kaoshanlu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = kaoshanlu;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1364,19 +1378,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4C4BBJ8J25;
+				CODE_SIGN_ENTITLEMENTS = albowen/albowen.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8D2PV5J5YR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/albowen/PrefixHeader.pch";
 				INFOPLIST_FILE = albowen/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xuannalisha.albowen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.albowen.kaoshanlu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = disKao;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

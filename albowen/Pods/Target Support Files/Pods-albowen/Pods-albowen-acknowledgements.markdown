@@ -229,6 +229,10 @@ THE SOFTWARE.
    limitations under the License.
 
 
+## GoogleMaps
+
+Copyright 2018 Google
+
 ## IQKeyboardManager
 
 MIT License

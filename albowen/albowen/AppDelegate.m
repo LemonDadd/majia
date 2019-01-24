@@ -20,7 +20,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    [JPUSHService setBadge:0];
     
+    [self initPush:launchOptions];
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
     _window.rootViewController = [BaseTabBarController new];
@@ -30,15 +33,7 @@
     if (list == nil) {
         [self initshuj];
     }
-    
-    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    if (@available(iOS 12.0, *)) {
-        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound|JPAuthorizationOptionProvidesAppNotificationSettings;
-    } else {
-        // Fallback on earlier versions
-    }
-    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    [JPUSHService setupWithOption:launchOptions appKey:@"45cc0539e033901cccdcda8b" channel:@"" apsForProduction:true];
+  
     
     
     return YES;

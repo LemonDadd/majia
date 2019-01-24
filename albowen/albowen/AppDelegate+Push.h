@@ -18,8 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AppDelegate (Push)
 
-- (void)initPush;
-
+- (void)initPush:(NSDictionary *)launchOptions;
 @end
 
 NS_ASSUME_NONNULL_END

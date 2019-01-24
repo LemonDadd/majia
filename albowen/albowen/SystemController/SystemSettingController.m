@@ -10,6 +10,7 @@
 #import "MineViewTabViewCell.h"
 #import "BindingPhoneViewController.h"
 #import "UpdatePassViewController.h"
+#import "TaiLandViewController.h"
 
 @interface SystemSettingController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -39,7 +40,7 @@
     }];
     
     _imageArray = @[@"my_bind_icon",@"my_update_icon"];
-    _titleArray =@[@"ผูกโทรศัพท์มือถือ",@"เปลี่ยนรหัสผ่าน"];
+    _titleArray =@[@"นโยบายความเป็นส่วนตัว",@"เปลี่ยนรหัสผ่าน"];
 }
 
 - (void)setExtraCellLineHidden:(UITableView *)tableView {
@@ -109,8 +110,11 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIStoryboard *main=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     if (indexPath.row ==0) {
-        BindingPhoneViewController *vc =[main instantiateViewControllerWithIdentifier:@"BindingPhoneViewController"];
+        TaiLandViewController *vc= [TaiLandViewController new];
+        vc.str = @"http://221.204.177.145:8061/feixaun/index.html";
+        vc.yc = @"true";
         [self.navigationController pushViewController:vc animated:YES];
+        
     } else {
         UpdatePassViewController *vc =[main instantiateViewControllerWithIdentifier:@"UpdatePassViewController"];
         [self.navigationController pushViewController:vc animated:YES];

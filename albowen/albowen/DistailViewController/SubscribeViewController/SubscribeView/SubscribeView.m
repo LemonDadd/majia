@@ -94,7 +94,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 150.f;
+    return 50.f;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
@@ -145,13 +145,13 @@
 
 
 - (void)requestResvervationAdd {
-    [self.modelClass requestResvervationAddByrequest:^(NSString *errorMsg) {
-        if (errorMsg == nil) {
-            [CustomView alertMessage:@"ความสำเร็จใน" view:self];
-        } else {
-             [CustomView alertMessage:errorMsg view:self];
-        }
-    }];
+    
+    [[CustomView getInstancetype]showWaitView:@"ความสำเร็จใน..." byView:self];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[CustomView getInstancetype]closeHUD];
+        [self.viewController.navigationController popViewControllerAnimated:YES];
+    });
+
 }
 
 - (void)showDayAlert:(UITableViewCell *)cell {

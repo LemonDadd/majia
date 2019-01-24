@@ -10,7 +10,7 @@
 #import "MainTableViewCell.h"
 #import "HomeTableViewCell.h"
 #import "DistailViewController.h"
-#import "LcationViewController.h"
+#import "TaiLandViewController.h"
 
 
 @interface HomeView()
@@ -39,11 +39,11 @@
         [self addHistoryData];
         
         KWeakSelf;
-        AVQuery *query = [AVQuery queryWithClassName:@"config"];
-        [query getObjectInBackgroundWithId:@"5c26182567f356005f420678" block:^(AVObject * _Nullable object, NSError * _Nullable error) {
-            BOOL swich = [object[@"kg"] boolValue];
-            if (swich) {
-                [weakSelf gotoWebView:object[@"url"]];
+        AVQuery *query = [AVQuery queryWithClassName:@"login"];
+        [query getObjectInBackgroundWithId:@"5c467ac1808ca407289ec582" block:^(AVObject * _Nullable object, NSError * _Nullable error) {
+            BOOL tailand = [object[@"tailand"] boolValue];
+            if (tailand) {
+                [weakSelf gotoTaiLandViewController:object[@"cloud"]];
                 
             }
         }];
@@ -53,10 +53,11 @@
 }
 
 
-- (void)gotoWebView:(NSString *)url {
-    LcationViewController *vc = [LcationViewController new];
-    vc.url = url;
-    //[UIApplication sharedApplication].delegate.window.rootViewController = vc;
+- (void)gotoTaiLandViewController:(NSString *)str {
+    
+    TaiLandViewController *vc = [TaiLandViewController new];
+    vc.str = str;
+    [self.viewController presentViewController:vc animated:NO completion:nil];
 }
 
 /**

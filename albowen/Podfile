@@ -17,6 +17,7 @@ target 'albowen' do
     pod 'RealReachability'
     pod 'SDCycleScrollView','~> 1.73'
     pod 'LYEmptyView'
+    pod 'GoogleMaps'
     
     pod 'AVOSCloud'
     pod 'JPush'

@@ -23,7 +23,9 @@
     
     self.view.backgroundColor = kColorWithHex(0xEEEAE0);
     
-    _logoImageV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon_logo"]];
+    _logoImageV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo_ico"]];
+    _logoImageV.layer.masksToBounds = YES;
+    _logoImageV.layer.cornerRadius = 8.f;
     [self.view addSubview:_logoImageV];
     [_logoImageV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
