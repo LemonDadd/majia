@@ -34,7 +34,7 @@
         }];
         
         _dianhua = [UILabel new];
-        _dianhua.text = @"บริการโทรศัพท์:0351-1234567";
+        _dianhua.text = @"บริการโทรศัพท์:02-2281-5051";
         _dianhua.font = [UIFont systemFontOfSize:15];
         [self.contentView addSubview:_dianhua];
         [_dianhua mas_makeConstraints:^(MASConstraintMaker *make) {

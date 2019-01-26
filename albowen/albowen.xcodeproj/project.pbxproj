@@ -30,6 +30,9 @@
 		B01D390421F3122800BC87B8 /* UpdatePassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390121F3122800BC87B8 /* UpdatePassViewController.m */; };
 		B01D390521F3122800BC87B8 /* SystemSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390221F3122800BC87B8 /* SystemSettingController.m */; };
 		B01D390821F58DA700BC87B8 /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B01D390721F58DA700BC87B8 /* TextTableViewCell.m */; };
+		B093B15421FBF9C500B8E45E /* GoogleMapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B093B15321FBF9C500B8E45E /* GoogleMapTableViewCell.m */; };
+		B093B15721FBF9DD00B8E45E /* PriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B093B15621FBF9DD00B8E45E /* PriceTableViewCell.m */; };
+		B093B15B21FC1FD400B8E45E /* DoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B093B15A21FC1FD400B8E45E /* DoneViewController.m */; };
 		B0C22FCC21F95EA200A7A0C2 /* TaiLandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C22FCB21F95EA200A7A0C2 /* TaiLandViewController.m */; };
 		DA8BB8A521EA135200506854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB8A421EA135200506854 /* AppDelegate.m */; };
 		DA8BB8A821EA135200506854 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8BB8A721EA135200506854 /* ViewController.m */; };
@@ -170,6 +173,12 @@
 		B01D391421F5982800BC87B8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B01D391521F5983700BC87B8 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Main.strings; sourceTree = "<group>"; };
 		B01D391621F5983700BC87B8 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B093B15221FBF9C500B8E45E /* GoogleMapTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleMapTableViewCell.h; sourceTree = "<group>"; };
+		B093B15321FBF9C500B8E45E /* GoogleMapTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleMapTableViewCell.m; sourceTree = "<group>"; };
+		B093B15521FBF9DD00B8E45E /* PriceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriceTableViewCell.h; sourceTree = "<group>"; };
+		B093B15621FBF9DD00B8E45E /* PriceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PriceTableViewCell.m; sourceTree = "<group>"; };
+		B093B15921FC1FD400B8E45E /* DoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoneViewController.h; sourceTree = "<group>"; };
+		B093B15A21FC1FD400B8E45E /* DoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoneViewController.m; sourceTree = "<group>"; };
 		B0C22FCA21F95EA200A7A0C2 /* TaiLandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaiLandViewController.h; sourceTree = "<group>"; };
 		B0C22FCB21F95EA200A7A0C2 /* TaiLandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaiLandViewController.m; sourceTree = "<group>"; };
 		B0C22FCD21F97DB200A7A0C2 /* albowen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = albowen.entitlements; sourceTree = "<group>"; };
@@ -497,6 +506,15 @@
 			path = UpdatePassViewController;
 			sourceTree = "<group>";
 		};
+		B093B15821FC1FB500B8E45E /* DoneViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B093B15921FC1FD400B8E45E /* DoneViewController.h */,
+				B093B15A21FC1FD400B8E45E /* DoneViewController.m */,
+			);
+			path = DoneViewController;
+			sourceTree = "<group>";
+		};
 		DA8BB89721EA135200506854 = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +678,7 @@
 		DA8BB90B21EB607A00506854 /* DistailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B093B15821FC1FB500B8E45E /* DoneViewController */,
 				DA8BB96721F0C0C000506854 /* SubscribeViewController */,
 				DA8BB93421EB8BB600506854 /* DistailViewController.h */,
 				DA8BB93521EB8BB600506854 /* DistailViewController.m */,
@@ -673,6 +692,10 @@
 				DA8BB9A221F206FF00506854 /* PhoneTableViewCell.m */,
 				DA8BB9A721F2162500506854 /* MapTableViewCell.h */,
 				DA8BB9A821F2162500506854 /* MapTableViewCell.m */,
+				B093B15221FBF9C500B8E45E /* GoogleMapTableViewCell.h */,
+				B093B15321FBF9C500B8E45E /* GoogleMapTableViewCell.m */,
+				B093B15521FBF9DD00B8E45E /* PriceTableViewCell.h */,
+				B093B15621FBF9DD00B8E45E /* PriceTableViewCell.m */,
 				B01D390621F58DA700BC87B8 /* TextTableViewCell.h */,
 				B01D390721F58DA700BC87B8 /* TextTableViewCell.m */,
 			);
@@ -1093,6 +1116,7 @@
 				DA8BB93321EB8BAA00506854 /* UserViewController.m in Sources */,
 				DA8BB8F221EA236D00506854 /* BaseView.m in Sources */,
 				DA8BB99B21F0C33800506854 /* NSDate+JKInternetDateTime.m in Sources */,
+				B093B15B21FC1FD400B8E45E /* DoneViewController.m in Sources */,
 				DA8E363021F8B7A100652B93 /* AppDelegate+Push.m in Sources */,
 				DA8BB98221F0C0C000506854 /* SubscribeViewAlertView.m in Sources */,
 				B01D38F621F3005E00BC87B8 /* MyColViewController.m in Sources */,
@@ -1128,6 +1152,7 @@
 				DA8BB95C21F0B3FE00506854 /* NameTableViewCell.m in Sources */,
 				DA8BB92221EB762A00506854 /* MainTableViewCell.m in Sources */,
 				DA8E362321F46F4D00652B93 /* AboutViewController.m in Sources */,
+				B093B15721FBF9DD00B8E45E /* PriceTableViewCell.m in Sources */,
 				B01D390421F3122800BC87B8 /* UpdatePassViewController.m in Sources */,
 				DA8BB9A021F0C33800506854 /* NSDate+JKCupertinoYankee.m in Sources */,
 				B01D38E821EDDA6A00BC87B8 /* NHFUpLoadImages.m in Sources */,
@@ -1136,6 +1161,7 @@
 				DA8BB99E21F0C33800506854 /* NSDate+JKReporting.m in Sources */,
 				DA8BB92D21EB8B5500506854 /* BaseTabBarController.m in Sources */,
 				B01D38D621EDD93300BC87B8 /* SearchTitleView.m in Sources */,
+				B093B15421FBF9C500B8E45E /* GoogleMapTableViewCell.m in Sources */,
 				B01D38AF21EDD7D500BC87B8 /* SearchResultViewController.m in Sources */,
 				DA8BB8A521EA135200506854 /* AppDelegate.m in Sources */,
 				DA8BB9C321F2217800506854 /* MVClassController.m in Sources */,

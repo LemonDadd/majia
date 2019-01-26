@@ -32,5 +32,6 @@
 #import "LYEmptyViewHeader.h"
 #import <UserNotifications/UserNotifications.h>
 #import <AVOSCloud/AVOSCloud.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 #endif /* PrefixHeader_pch */

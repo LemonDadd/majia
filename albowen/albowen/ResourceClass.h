@@ -22,13 +22,23 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSString *fangjian;
 @property (nonatomic, copy)NSString *jiaotong;
 @property (nonatomic, copy)NSString *fangxing;
-@property (nonatomic, copy)NSString *fangjia;
+@property (nonatomic, strong)NSArray *fangjia;
 @property (nonatomic, copy)NSString *sheshi;
 @property (nonatomic, copy)NSString *tiaokuan;
 @property (nonatomic, copy)NSString *dis;
 @property (nonatomic, assign)BOOL isSc;
 
+@end
+
+
+@interface fangjiaClass : NSObject
+
+@property (nonatomic, copy)NSString *name;
+@property (nonatomic, copy)NSString * price;
+@property (nonatomic, copy)NSString * image;
 
 @end
+
+
 
 NS_ASSUME_NONNULL_END

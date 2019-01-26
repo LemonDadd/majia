@@ -11,3 +11,9 @@
 @implementation ResourceClass
 
 @end
+
+
+@implementation fangjiaClass
+
+@end
+

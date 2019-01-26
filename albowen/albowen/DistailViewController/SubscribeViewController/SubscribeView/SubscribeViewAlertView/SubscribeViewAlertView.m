@@ -50,26 +50,26 @@
             make.top.equalTo(_nameField.mas_bottom);
             make.height.equalTo(@1);
         }];
-        
-        _idField =[UITextField new];
-        _idField.delegate =self;
-        _idField.placeholder = @"บัตรประชาชน";
-        [_idField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-        _idField.font =[UIFont fontByName:@"" fontSize:16];
-        _idField.textColor = [UIColor whiteColor];
-        [self addSubview:_idField];
-        [_idField mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.height.equalTo(_nameField);
-            make.top.equalTo(line.mas_bottom).offset(both);
-        }];
-        
-        UIView *line1 = [UIView new];
-        line1.backgroundColor = [UIColor whiteColor];
-        [self addSubview:line1];
-        [line1 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.height.equalTo(line);
-            make.top.equalTo(_idField.mas_bottom);
-        }];
+
+//        _idField =[UITextField new];
+//        _idField.delegate =self;
+//        _idField.placeholder = @"บัตรประชาชน";
+//        [_idField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+//        _idField.font =[UIFont fontByName:@"" fontSize:16];
+//        _idField.textColor = [UIColor whiteColor];
+//        [self addSubview:_idField];
+//        [_idField mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.right.height.equalTo(_nameField);
+//            make.top.equalTo(line.mas_bottom).offset(both);
+//        }];
+//
+//        UIView *line1 = [UIView new];
+//        line1.backgroundColor = [UIColor whiteColor];
+//        [self addSubview:line1];
+//        [line1 mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.right.height.equalTo(line);
+//            make.top.equalTo(_idField.mas_bottom);
+//        }];
         
         _phoneField =[UITextField new];
         _phoneField.keyboardType = UIKeyboardTypeNumberPad;
@@ -80,7 +80,7 @@
         [self addSubview:_phoneField];
         [_phoneField mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.height.equalTo(_nameField);
-            make.top.equalTo(line1.mas_bottom).offset(both);
+            make.top.equalTo(line.mas_bottom).offset(both);
         }];
         
         UIView *line2 = [UIView new];

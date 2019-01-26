@@ -20,6 +20,7 @@
 @interface MineView()
 
 @property (nonatomic, strong)SelectPhotoManager *photoManager;
+@property (nonatomic, strong)UIImage *image;
 
 @end
 
@@ -80,8 +81,8 @@
             cell.nameLabel.text = @"กรุณาคลิกที่เข้าสู่ระบบ";
         } else {
             
-            if ([UserInfoClass getUserInfoClass].image) {
-                cell.headerImageView.image =[UserInfoClass getUserInfoClass].image;
+            if (_image) {
+                cell.headerImageView.image =_image;
             } else {
                 [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[UserInfoClass getUserInfoClass].headimg]] placeholderImage:Def];
             }
@@ -223,7 +224,7 @@
 
 - (void)uploadImage:(UIImage *)img {
 //    [[CustomView getInstancetype]showWaitView:@"正在上传..." byView:self];
-    [UserInfoClass getUserInfoClass].image = img;
+    _image = img;
     [_mainTableView reloadData];
 }
 

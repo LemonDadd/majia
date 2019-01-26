@@ -16,6 +16,8 @@
 #import <MapKit/MapKit.h>
 #import "TextTableViewCell.h"
 #import <CoreLocation/CoreLocation.h>
+#import "GoogleMapTableViewCell.h"
+#import "PriceTableViewCell.h"
 
 @interface DistailViewController ()<UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate>
 
@@ -111,8 +113,6 @@
 {
     [CustomView alertMessage:@"รับความล้มเหลวในตำแหน่ง" view:self.view];
 }
-
-
 - (void)btnEVENT {
     
     if ([UserInfoClass getUserInfoClass]  == nil) {
@@ -127,10 +127,13 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 8;
+    return 9;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 3) {
+        return _model.fangjia.count;
+    }
     return 1;
 }
 
@@ -168,10 +171,14 @@
     }
     
     if (indexPath.section ==3) {
-        PhoneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhoneTableViewCell"];
+        PriceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PriceTableViewCell"];
         if (cell == nil) {
-            cell = [[PhoneTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PhoneTableViewCell"];
+            cell = [[PriceTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PriceTableViewCell"];
         }
+        fangjiaClass *fangjia = [fangjiaClass mj_objectWithKeyValues:_model.fangjia[indexPath.row]];
+        cell.name.text =fangjia.name;
+        cell.imageV.image = [UIImage imageNamed:fangjia.image];
+        cell.priceLabel.text = fangjia.price;
         return cell;
     }
     
@@ -183,19 +190,28 @@
         return cell;
     }
     
-    if (indexPath.section ==5 || indexPath.section ==6||indexPath.section ==7) {
+    if (indexPath.section ==5) {
+        GoogleMapTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GoogleMapTableViewCell"];
+        if (cell == nil) {
+            cell = [[GoogleMapTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"GoogleMapTableViewCell"];
+        }
+        cell.model = self.model;
+        return cell;
+    }
+    
+    if (indexPath.section ==6 || indexPath.section ==7||indexPath.section ==8) {
         TextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextTableViewCell"];
         if (cell == nil) {
             cell = [[TextTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TextTableViewCell"];
         }
         
-        if (indexPath.section ==5) {
+        if (indexPath.section ==6) {
             cell.title.text = @"การขนส่ง";
             cell.text.text = _model.jiaotong;
-        } else if (indexPath.section ==6) {
+        } else if (indexPath.section ==7) {
             cell.title.text = @"ครอบครัว";
             cell.text.text = _model.fangxing;
-        } else if (indexPath.section ==7) {
+        } else if (indexPath.section ==8) {
             cell.title.text = @"สิ่งอํานวยความสะดวก";
             cell.text.text = _model.sheshi;
         }
@@ -208,32 +224,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (indexPath.section ==3) {
-        //服务咨询
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"บริการให้คำปรึกษา" message:@"โทร . 02-2281-5051" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"การยกเลิก" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-            
-        }];
-        
-        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"โทร" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://02-2281-5051"]];
-        }];
-        
-        // Add the actions.
-        [alertController addAction:cancelAction];
-        [alertController addAction:otherAction];
-        
-        
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
-    
     if (indexPath.section ==4) {
-        
         [_manager startUpdatingLocation];
-        
-       
     }
     
 }

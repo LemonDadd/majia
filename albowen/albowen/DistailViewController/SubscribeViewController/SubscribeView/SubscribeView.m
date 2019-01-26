@@ -14,10 +14,12 @@
 #import "SubscribeViewAlertView.h"
 #import "BaseViewController.h"
 #import "JhlvShowAlertController.h"
+#import "DoneViewController.h"
 
 @implementation SubscribeView
 {
     NSString *dateStr;
+    NSString *endStr;
     NSInteger dateIndx;
 }
 - (instancetype)init
@@ -52,7 +54,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 3;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,14 +67,26 @@
         }
         cell.contentLabel.text =_model.tiaokuan;
         return cell;
-    } else {
+    }else if (indexPath.row == 1) {
         SubscribeViewBottomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SubscribeViewBottomCell"];
         if (cell == nil) {
             cell = [[SubscribeViewBottomCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SubscribeViewBottomCell"];
         }
-        cell.titleLabel.text = @"วันที่";
+        cell.titleLabel.text = @"วันที่เช็คอิน";
         if (dateStr) {
             cell.contentLabel.text = dateStr;
+        }else {
+            cell.contentLabel.text = @"วันที่";
+        }
+         return cell;
+    } else {
+        SubscribeViewBottomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SubscribeViewBottomCell1"];
+        if (cell == nil) {
+            cell = [[SubscribeViewBottomCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SubscribeViewBottomCell1"];
+        }
+        cell.titleLabel.text = @"วันที่เช็คเอาท์";
+        if (dateStr) {
+            cell.contentLabel.text = endStr;
         }else {
             cell.contentLabel.text = @"วันที่";
         }
@@ -110,6 +124,11 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (indexPath.row == 1) {
+        dateIndx =1;
+        [self showDayAlert:cell];
+    }
+    if (indexPath.row == 2) {
+        dateIndx =2;
         [self showDayAlert:cell];
     }
 }
@@ -149,17 +168,20 @@
     [[CustomView getInstancetype]showWaitView:@"ความสำเร็จใน..." byView:self];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[CustomView getInstancetype]closeHUD];
-        [self.viewController.navigationController popViewControllerAnimated:YES];
+        DoneViewController *vc = [DoneViewController new];
+        [self.viewController.navigationController pushViewController:vc animated:YES];
     });
-
 }
 
 - (void)showDayAlert:(UITableViewCell *)cell {
     NSMutableArray *dateArray =[NSMutableArray arrayWithArray:[self getOneWeek]];
     [JhlvShowAlertController shareInstance].sender =cell;
     [[JhlvShowAlertController shareInstance]showSheet:@"วันที่" message:nil cancelTitle:nil titleArray:dateArray viewController:[self viewController] confirm:^(NSInteger buttonTag) {
-        self->dateStr = dateArray[buttonTag];
-        self->dateIndx = buttonTag;
+        if (self->dateIndx == 1) {
+            self->dateStr = dateArray[buttonTag];
+        } else if (self->dateIndx == 2) {
+            self->endStr = dateArray[buttonTag];
+        }
         [self->_mainTabView reloadData];
     }];
 }
